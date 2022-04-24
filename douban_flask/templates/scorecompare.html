@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+       <!-- 引入刚刚下载的 ECharts 文件 -->
+       <script src="/static/assets/js/echarts.min.js"></script>
+       <!-- 引入刚刚下载的 esat echarts的计算文件 -->
+       <script src="/static/assets/js/ecStat.min.js"></script>
+      <!-- site metas -->
+      <title>电影信息对比</title>
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="/static/assets/css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" href="/static/assets/css/style.css">
+       <!-- 引入jQuery -->
+       <script src="/static/assets/js/jquery.min.js"></script>
+   </head>
+   <!-- body -->
+   <body class="main-layout">
+      <!-- top -->
+      <!-- header -->
+      <header>
+        <ul>
+            <li><a href="/index"><b>主页</b></a></li>
+            <li><a href="/doubanmovie">豆瓣电影</a></li>
+            <li><a href="/imdbmovie">imdb电影</a></li>
+            <li><a href="/scorecompare">数据对比</a></li>
+            <li><a href="/word">词云</a></li>
+            <li><a href="/recommov">选电影</a></li>
+            <li><a href="/messageCenter">留言</a></li>
+        </ul>
+    </header>
+      <!-- end header -->
+      <div class="workArea">
+                  <div class = 'container'>
+
+            <p></p>
+
+            <!-- 一 评分的柱状图-->
+            <div class="row" style="">
+                <!-- 为 ECharts 准备一个定义了宽高的 DOM -->
+                <div id="main" style="width: 1200px; height:400px "></div>
+            </div>
+            <div class="row" style="">
+                <!-- 为 ECharts 准备一个定义了宽高的 DOM -->
+                <div id="rating_judge" style="width: 2000px; height:600px "></div>
+            </div>
+
+
+
+            <!--二 地图的显示区-->
+            <div class="row" style="">
+                <!-- 国家 豆瓣 显示 -->
+                <div class="row" style="">
+                <!-- 为 ECharts 准备一个定义了宽高的 DOM -->
+                <div id="main3" style="width: 600px; height:600px "></div>
+                </div>
+                <!--国家 imdb 显示-->
+                <div class="row" style="">
+                    <div id="main2" style="width:600px; height:600px "></div>
+                </div>
+                <!--综合显示地区-->
+             <div class="row" style="">
+                    <!-- 为 ECharts 准备一个定义了宽高的 DOM -->
+                    <div id="main4" style="width: 1200px; height:800px "></div>
+            </div>
+            </div>
+
+
+            <!--年代-->
+
+                <div class="row" style="">
+                     <div class="row" style="">
+                        <!-- 为 ECharts 准备一个定义了宽高的 DOM -->
+                        <div id="yearCompare" style="width: 1200px; height:600px "></div>
+                     </div>
+            </div>
+
+
+            <!--电影类型的显示区-->
+                <div class="row" style="">
+                    <div id="main5" style="width: 550px; height:400px "></div>
+                    <div id="main6" style="width: 550px; height:400px "></div>
+                </div>
+
+        </div>
+      <p>{{ countryUnio }}</p>
+      </div>
+
+
+
+{#第一个图的配置 评分的折线图#}
+<script type="text/javascript">
+    var dom = document.getElementById("main");
+    var myChart = echarts.init(dom);
+    var app = {};
+    var option;
+    option = {
+        title: {
+            text: '豆瓣和imdb电影评分数据对比',
+            left: 'center',
+            top:  '0'
+
+        },
+        tooltip: { //鼠标悬停提示内容
+                        trigger: 'axis',
+                        axisPointer: {            // 坐标轴指示器，坐标轴触发有效
+                            type: 'cross'    // 十字线显示
+                        }
+        },
+        legend: {
+            y: '20px',
+            data: ['豆瓣', 'imdb'],
+            selectedMode: true,
+        },
+        xAxis: [
+            //X轴
+            {
+                type: 'category',
+                data: {{ Dscore }},
+                axisLabel: {show: true,interval: 0,rotate: 40 },
+                position: 'bottom',
+            },
+            //x轴显示两组数据  第2个X轴
+            {
+                type: 'category',
+                axisLine: {show: true},
+                axisTick: {show: true},
+                axisLabel: {show: true, interval: 0,rotate: 40 },
+                splitArea: {show: false},
+                splitLine: {show: true},
+                data:  {{ score }},
+                position: 'top',
+            }
+        ],
+        yAxis: [ //两个y轴  左边y轴
+                    {
+                        type: 'value',
+                        name: "豆瓣",
+                        axisLabel: {
+                            show: true,
+                            interval: 'auto',
+                            formatter: '{value} '
+                        },
+                        splitNumber: 10,
+                        splitLine: {
+                            show: true,
+                            lineStyle: {
+                                type: 'dashed'
+                            }
+                        },
+                        // splitArea: {
+                        //     show: false
+                        // },
+                        // max: 100,
+                        // interval: 10,
+                    },
+                    //右边y轴
+                    {
+                        type: 'value',
+                        name: "imdb",
+
+                        axisLabel: {
+                            show: true,
+                            interval: 'auto',
+                            formatter: '{value} '
+                        },
+                        splitNumber: 10,
+                        splitLine: {
+                            show: true,
+                            lineStyle: {
+                                type: 'dashed'
+                            }
+                        },
+                        splitArea: {
+                            show: false
+                        },
+                        // max: 100,
+                        // interval: 10,
+                    }
+                ],
+        series: [ //用于指定图标显示类型
+            //第一个柱状图的数据
+            {
+                name: '豆瓣',
+                type: 'line',
+                yAxisIndex: '0',// 第一个柱状图的数据
+                xAxisIndex: '0',
+                smooth: true, //光滑的曲线
+                itemStyle: {normal: {color: 'rgba(98,192,84,0.99)', label: {show: true}}},
+                data:{{ Dnum }}
+            },
+
+            //右边Y轴的数据
+            {
+                name: 'imdb',
+                type: 'line',
+                symbol: 'emptyCircle',
+                showAllSymbol: true, //动画效果
+                symbolSize: 3,
+                smooth: true, //光滑的曲线
+                yAxisIndex: '1',
+                xAxisIndex: '1',
+                itemStyle: {normal: {color: 'rgba(53,75,107,0.99)', label: {show: true,}}},
+                data: {{ num }}
+            },
+        ]
+    };
+
+    if (option && typeof option === 'object') {
+        myChart.setOption(option);
+    }
+    </script>
+<script type="text/javascript">
+    var dom = document.getElementById("rating_judge");
+    var myChart_rj = echarts.init(dom);
+    var app = {};
+
+    var Dsets = {{ DjudgeScore }};
+    var sets = {{ judgeScore }};
+    var myRegression = ecStat.regression('polynomial', sets,1);  //计算回归曲线
+    var myDRegression = ecStat.regression('polynomial', Dsets,1);  //计算回归曲线
+    //console.log(myRegression.points)
+
+
+    var option = {
+        title: {
+            text: '电影评分和评分人数分布散点图',
+            left: 'center',
+            top:  '0'
+
+        },
+        legend: {
+            y: '20px',
+            data: ['douban', 'imdb'],
+            selectedMode: true,
+        },
+        xAxis: {
+            name:'评分',
+            scale:'true'
+        },
+        yAxis: {
+            name:'人数',
+            scale:'true',
+            splitLine: {
+                    lineStyle: {
+                    type: 'dashed'
+            }
+    }
+        },
+
+        tooltip: { //鼠标悬停提示内容
+                    trigger: 'axis',
+                    axisPointer: {            // 坐标轴指示器，坐标轴触发有效
+                        type: 'cross',    // 十字线显示
+                        label:{show:'false'}
+                    }
+        },
+        series: [{
+            name:"imdb",
+            symbolSize: 15,
+            data:sets,
+            type: 'scatter',
+            itemStyle: {normal: {color: 'rgba(53,75,107,0.99)'}},
+        },
+        {
+            symbolSize: 15,
+            data:Dsets,
+            type: 'scatter',
+            name:"douban",
+            itemStyle: {normal: {color: 'rgba(98,192,84,0.99)'}},
+        },
+
+        {
+            name: 'imdb',
+            type: 'line',
+            smooth: true,
+            data:myRegression.points,
+            symbolSize: 0.1,
+            symbol: 'circle',
+            labelLayout: { dx: -20 },
+            encode: { label: 2, tooltip: 1 }
+        },
+        {
+            name: 'douban',
+            type: 'line',
+            smooth: true,
+            data:myDRegression.points,
+            symbolSize: 0.1,
+            symbol: 'circle',
+            labelLayout: { dx: -20 },
+            encode: { label: 2, tooltip: 1 },
+            itemStyle: {normal: {color: 'rgba(210,16,16,0.99)'}},
+        },
+        ]
+    };
+
+    if (option && typeof option === 'object') {
+        myChart_rj.setOption(option);
+    }
+    </script>
+
+{#第二个图的配置 imdb地区的饼图#}
+<script type="text/javascript">
+    var dom = document.getElementById("main2");
+    var myChart2 = echarts.init(dom);
+    var app = {};
+    var option;
+    option = {
+        title:{
+            text:'imdb',
+            textStyle:{color:'blue'},
+             top:  '20',
+            left:'100',
+        },
+      tooltip: {},
+      toolbox: {
+            top:'15',
+            left:'80',
+          feature: {
+              dataView: {},
+          }
+      },
+
+      series: [
+        {data:[
+                {% for item in country %}
+                {name:'{{item[0]}}',value:{{item[1]}}},
+                {% endfor %}
+        ].sort( (a,b) => a.value - b.value ),    //将饼图按从大到小排序
+        type: 'pie',
+        showBackground: true,
+        backgroundStyle: {
+        color: 'rgba(107,53,69,0.99)'
+        },
+        label: {
+            show: true,
+            formatter: function (arg) {
+                //console.log(arg)
+                return arg.name + '占比'  + arg.percent +'%'
+            }
+        },
+        {#roseType: 'area'#}
+        }
+      ]
+    };
+
+    if (option && typeof option === 'object') {
+        myChart2.setOption(option);
+    }
+    </script>
+
+{#第二个图的配置 豆瓣地区的地图#}
+<script type="text/javascript">
+    var dom = document.getElementById("main3");
+    var myChart3 = echarts.init(dom);
+    var app = {};
+    var option;
+    option = {
+        title:{
+            text:'豆瓣',
+            textStyle:{color:'green '},
+             top:  '20',
+            left:'100',
+        },
+        tooltip: {},
+        toolbox: {
+            top:'15',
+            left:'80',
+          feature: {
+              dataView: {},
+          }
+      },
+
+      series: [
+        {data:[
+                {% for item in Dcountry %}
+                {name:'{{item[0]}}',value:{{item[1]}}},
+                {% endfor %}
+        ].sort( (a,b) => a.value - b.value ),
+
+        type: 'pie',
+        showBackground: true,
+        backgroundStyle: {
+        color: 'rgba(53,75,107,0.99)'
+        },
+        label: {
+            show: true,
+            formatter: function (arg) {
+                //console.log(arg)
+                return arg.name + '占比'  + arg.percent +'%'
+            }
+        },
+        {#roseType: 'area'#}
+        }
+      ]
+    };
+
+    if (option && typeof option === 'object') {
+        myChart3.setOption(option);
+    }
+    </script>
+
+{#第二个图的配置 综合地区的柱状图 #}
+<script type="text/javascript">
+    var dom = document.getElementById("main4");
+    var myChart4 = echarts.init(dom);
+    var myGeocode = {{ countryUnio|tojson }};
+    var app = {};
+    var option;
+    option = {
+      title: {
+        text: '电影制作地区分布',
+          textStyle: {
+            color: 'black'
+          },
+          borderWidth: 5,
+          borderColor: '' ,//边框颜色
+          borderRadius: 5       //边框厚度
+      },
+        legend: {},
+      backgroundColor:  '',
+      toolbox:{
+          feature:{
+              dataView: {},
+              dataZoom:{}
+          }
+      },
+      tooltip: {}, //鼠标移动显示柱状图数值
+      yAxis: {
+        type: 'category', //类目轴
+        data: myGeocode,  //直接传入数据flask会将''转化为&#39
+      },
+      xAxis: {
+        type: 'value'  //值轴
+      },
+      series: [
+        {  emphasis: {
+                itemStyle: {
+                // 高亮时点的颜色。
+                color: 'blue'
+                },
+                label: {
+                show: true,
+                }
+            },
+          data: {{ countryNum }},
+          type: 'bar',
+            name:'imdb',
+          markPoint:{                           //最大值，最小值
+              data:[{type: 'max', name: '最大值'},
+                  {type:'min',name:'最小值'}
+              ]
+          },
+          showBackground: true,
+          backgroundStyle: {
+            color: 'rgba(53,75,107,0.99)'
+          }
+        },
+           {  emphasis: {
+                itemStyle: {
+                // 高亮时点的颜色。
+                color: 'blue'
+                },
+                label: {
+                show: true,
+                }
+            },
+               name: 'douban',
+          data: {{ DcountryNum }},
+          type: 'bar',
+          markPoint:{                           //最大值，最小值
+              data:[{type: 'max', name: '最大值'},
+                  {type:'min',name:'最小值'}
+              ]
+          },
+          showBackground: true,
+          backgroundStyle: {
+            color: 'rgba(53,75,107,0.99)'
+          }
+        }
+      ]
+    };
+
+    if (option && typeof option === 'object') {
+        myChart4.setOption(option);
+    }
+    </script>
+
+{#第四个图的配置 类型的饼状图 #}
+<script type="text/javascript">
+    var dom = document.getElementById("main5");
+    var myChart5 = echarts.init(dom);
+    var app = {};
+    var option;
+    option = {
+     title: {
+        text: 'imdb电影类型分布',
+          textStyle: {
+            color: 'black'
+          },
+    },
+      tooltip: {},
+      toolbox: {
+          feature: {
+              dataView: {},
+          }
+      },
+
+      series: [
+        {data:[
+                {% for i in range(0,length) %}
+                {name:'{{mvtype[i]}}',value:{{mvtypenum[i]}}},
+                {% endfor %}
+        ].sort( (a,b) => a.value - b.value ),
+        type: 'pie',
+        showBackground: true,
+        backgroundStyle: {
+        color: 'rgba(53,75,107,0.99)'
+        },
+        label: {
+            show: true,
+            formatter: function (arg) {
+                //console.log(arg)
+                return arg.name + '占比'  + arg.percent +'%'
+            }
+        },
+        {#roseType: 'ridus'  //南丁格尔图#}
+        }
+      ]
+    };
+
+    if (option && typeof option === 'object') {
+        myChart5.setOption(option);
+    }
+    </script>
+
+{#第五个图的配置 类型的饼状图 #}
+<script type="text/javascript">
+    var dom = document.getElementById("main6");
+    var myChart6 = echarts.init(dom);
+    var app = {};
+    var option;
+    option = {
+     title: {
+        text: '豆瓣电影类型分布',
+          textStyle: {
+            color: 'black'
+          },
+    },
+      tooltip: {},
+      toolbox: {
+          feature: {
+              dataView: {},
+          }
+      },
+
+      series: [
+        {data:[
+                {% for i in range(0,Dlength) %}
+                {name:'{{Dmvtype[i]}}',value:{{Dmvtypenum[i]}}},
+                {% endfor %}
+        ].sort( (a,b) => a.value - b.value ),
+        type: 'pie',
+        showBackground: true,
+        backgroundStyle: {
+        color: 'rgba(53,75,107,0.99)'
+        },
+        label: {
+            show: true,
+            formatter: function (arg) {
+                //console.log(arg)
+                return arg.name + '占比'  + arg.percent +'%'
+            }
+        },
+        {#roseType: 'ridus'  //南丁格尔图#}
+        }
+      ]
+    };
+
+    if (option && typeof option === 'object') {
+        myChart6.setOption(option);
+    }
+    </script>
+
+{#豆瓣imdb 年代的曲线图 #}
+<script type="text/javascript">
+    var dom = document.getElementById("yearCompare");
+    var myChart_year = echarts.init(dom);
+    var app = {};
+    var option;
+    option = {
+        title: {
+            text: '豆瓣和imdb电影年份数据对比',
+            left: 'center',
+            top:  '0'
+
+        },
+        tooltip: { //鼠标悬停提示内容
+                        trigger: 'axis',
+                        axisPointer: {            // 坐标轴指示器，坐标轴触发有效
+                            type: 'cross'    // 十字线显示
+                        }
+        },
+        legend: {
+            y: '20px',
+            data: ['豆瓣', 'imdb'],
+            selectedMode: true,
+            right: 0,
+
+        },
+        xAxis: [
+            //X轴
+            {
+                type: 'category',
+                data: {{ Dyear }},
+                axisLabel: {show: true,interval: 0,rotate:90},
+                position: 'bottom',
+            },
+            //x轴显示两组数据  第2个X轴
+            {
+                type: 'category',
+                axisLine: {show: true},
+                axisTick: {show: true},
+                axisLabel: {show: true, interval: 0,rotate:90},
+                splitArea: {show: false},
+                splitLine: {show: true},
+                data:  {{ year }},
+                position: 'top',
+            }
+        ],
+        yAxis: [ //两个y轴  左边y轴
+                    {
+                        type: 'value',
+                        name: "豆瓣",
+                        axisLabel: {
+                            show: true,
+                            interval: 'auto',
+                            formatter: '{value} '
+                        },
+                        splitNumber: 10,
+                        splitLine: {
+                            show: true,
+                            lineStyle: {
+                                type: 'dashed'
+                            }
+                        },
+                        // splitArea: {
+                        //     show: false
+                        // },
+                        // max: 100,
+                        // interval: 10,
+                    },
+                    //右边y轴
+                    {
+                        type: 'value',
+                        name: "imdb",
+
+                        axisLabel: {
+                            show: true,
+                            interval: 'auto',
+                            formatter: '{value} '
+                        },
+                        splitNumber: 10,
+                        splitLine: {
+                            show: true,
+                            lineStyle: {
+                                type: 'dashed'
+                            }
+                        },
+                        splitArea: {
+                            show: false
+                        },
+                        // max: 100,
+                        // interval: 10,
+                    }
+                ],
+        series: [ //用于指定图标显示类型
+            //第一个柱状图的数据
+            {
+                name: '豆瓣',
+                type: 'line',
+                yAxisIndex: '0',// 第一个柱状图的数据
+                xAxisIndex: '0',
+                smooth: true, //光滑的曲线
+                itemStyle: {normal: {color: 'rgba(98,192,84,0.99)', label: {show: true}}},
+                data:{{ Dyearnum }}
+            },
+
+            //右边Y轴的数据
+            {
+                name: 'imdb',
+                type: 'line',
+                symbol: 'emptyCircle',
+                showAllSymbol: true, //动画效果
+                symbolSize: 3,
+                smooth: true, //光滑的曲线
+                yAxisIndex: '1',
+                xAxisIndex: '1',
+                itemStyle: {normal: {color: 'rgba(53,75,107,0.99)', label: {show: true,}}},
+                data: {{ yearnum }}
+            },
+        ]
+    };
+
+
+    if (option && typeof option === 'object') {
+        myChart_year.setOption(option);
+    }
+    </script>
+
+
+
+
+
+      <!--  footer -->
+      <footer>
+         <div class="footer">
+            <div class="copyright">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-md-8 offset-md-2">
+                        <p>Copyright &copy; mk310 name All rights reserved.</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <!-- end footer -->
+      <!-- Javascript files-->
+      <script src="static/assets/js/jquery.min.js"></script>
+      <script src="static/assets/js/bootstrap.bundle.min.js"></script>
+      <script src="static/assets/js/baguetteBox.min.js"></script>
+      <script src="static/assets/js/owl.carousel.min.js"></script>
+      <script src="static/assets/js/custom.js"></script>
+   </body>
+</html>

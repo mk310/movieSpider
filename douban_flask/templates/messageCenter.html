@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <!-- site metas -->
+      <title>留言板</title>
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="static/assets/css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" href="static/assets/css/style.css">
+
+
+   </head>
+   <!-- body -->
+   <body class="main-layout">
+      <!-- top -->
+      <!-- header -->
+      <header>
+         <ul>
+             <li><a href="/index"><b>主页</b></a></li>
+             <li><a href="/doubanmovie">豆瓣电影</a></li>
+             <li><a href="/imdbmovie">imdb电影</a></li>
+             <li><a href="/scorecompare">数据对比</a></li>
+             <li><a href="/word">词云</a></li>
+             <li><a href="/recommov">选电影</a></li>
+             <li><a href="/messageCenter">留言</a></li>
+         </ul>
+     </header>
+      <!-- end header -->
+      <p>{{ choose }}</p>
+      <div class="workArea" style="text-align: center;">
+        <div class = 'container'>
+            <form action="{{ url_for('messageCenter') }}"method="POST">
+                <p style="margin-bottom: 20px;">--MESSAGECENTER--</p>
+            <div class="row" style="display: inline;">
+                <b>用户名:</b><input type="text" name="say_user" style="border-radius: 17px;background-color: rgb(167, 178, 178);margin: 0 20px;">
+                <b>留言标题:</b><input type="text" name="say_title" style="border-radius: 17px;background-color: rgb(167, 178, 178);margin: 0 20px;">
+                <b>留言内容:</b><input type="text" name="say" style="border-radius: 17px;background-color: rgb(167, 178, 178);margin: 0 20px;">
+            </div>
+
+            <button style="margin: 0 20px;">提交留言</button>
+
+            </form>
+                <table class="table table-hover" style="margin-top: 20px;background-color: rgb(250, 251, 251); border-radius: 17px;">
+                    <thead>
+                    <tr>
+                        <th>标题</th>
+                        <th>内容</th>
+                        <th>用户</th>
+                        <th>留言时间</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for say in says %}
+                        <tr>
+                            <td>{{ say['title'] }}</td>
+                            <td>{{ say['text'] }}</td>
+                            <td>{{ say['user'] }}</td>
+                            <td>{{ say['date'] }}</td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+
+                </table>
+                </center>
+                <p>--END--</p>
+      </div>
+   </div>
+         
+
+      <!--  footer -->
+      <footer>
+         <div class="footer">
+            <div class="copyright">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-md-8 offset-md-2">
+                        <p>Copyright &copy; mk310 name All rights reserved.</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <!-- end footer -->
+
+   </body>
+</html>

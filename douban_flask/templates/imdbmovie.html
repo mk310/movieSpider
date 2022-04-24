@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head style="box-shadow: 0px 0px 8px 5px">
+      <!-- basic -->
+      <meta charset="utf-8">
+       <meta name="referrer" content="no-referrer" /> <!--可以让img标签预加载网络图片-->
+
+      <!-- site metas -->
+      <title>imdb电影</title>
+
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="static/assets/css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" href="static/assets/css/style.css">
+
+   </head>
+   <!-- body -->
+   <body class="main-layout">
+      <!-- top -->
+      <!-- header -->
+      <header>
+         <ul>
+             <li><a href="/index"><b>主页</b></a></li>
+             <li><a href="/doubanmovie">豆瓣电影</a></li>
+             <li><a href="/imdbmovie">imdb电影</a></li>
+             <li><a href="/scorecompare">数据对比</a></li>
+             <li><a href="/word">词云</a></li>
+             <li><a href="/recommov">选电影</a></li>
+             <li><a href="/messageCenter">留言</a></li>
+         </ul>
+     </header>
+      <!-- end header -->
+
+      <!-- working -->
+      <div class="workArea">
+         <div class = 'container' >
+            <center><button><a style="text-decoration: none;" href = '/imdbscore'><b>电影数据分析</b></a></button></center>
+            <div class = 'row mt-5 justify-content-around'>
+                {% for movie in movies %}
+   
+                  <div class="movieBox">
+                      <div class="imgBox">
+                          <img src= {{ movie[2] }} style="height: 400px ; width: 300px;">
+                          <div class="movieTitle"><p><b>{{ movie[3] }}</b></p></div>
+                      </div>
+                      <a href="{{movie[1]}}">
+                        <div class="infoBox">
+                           <img src= {{ movie[2] }} style="height: 50%" >
+                           <div class="movieTitle"><p>{{ movie[3] }}</p></div>
+                           <p>外文名:{{ movie[4] }}</p>
+                           <p>评分:{{ movie[5] }}  评分人数:{{ movie[6] }}</p>
+                           <p>导演:{{ movie[8] }}</p>
+                           <p>主演:{{ movie[9] }}</p>
+                           <p>年份:{{ movie[10] }}  地区:{{ movie[11] }}</p>
+                           <p>类型:{{ movie[12] }}</p>
+                       </div>
+                      </a>
+                  </div>
+                {% endfor %}
+            </div>
+        </div>
+      </div>
+       <!--end working --> 
+
+      <!--  footer -->
+      <footer>
+         <div class="footer">
+            <div class="copyright">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-md-8 offset-md-2">
+                        <p>Copyright &copy; mk310 name All rights reserved.</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <!-- end footer -->
+   </body>
+</html>

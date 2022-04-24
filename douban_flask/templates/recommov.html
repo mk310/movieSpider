@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head style="box-shadow: 0px 0px 8px 5px">
+      <!-- basic -->
+      <meta charset="utf-8">
+       <meta name="referrer" content="no-referrer" /> <!--可以让img标签预加载网络图片-->
+
+      <!-- site metas -->
+      <title>电影推荐页</title>
+
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="static/assets/css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" href="static/assets/css/style.css">
+
+   </head>
+   <!-- body -->
+   <body >
+      <!-- top -->
+      <!-- header -->
+      <header>
+         <ul>
+             <li><a href="/index"><b>主页</b></a></li>
+             <li><a href="/doubanmovie">豆瓣电影</a></li>
+             <li><a href="/imdbmovie">imdb电影</a></li>
+             <li><a href="/scorecompare">数据对比</a></li>
+             <li><a href="/word">词云</a></li>
+             <li><a href="/recommov">选电影</a></li>
+             <li><a href="/messageCenter">留言</a></li>
+         </ul>
+     </header>
+      <!-- end header -->
+      <!-- working -->
+      <div class="workArea">
+        <div class = 'container' >
+            <form action="{{ url_for('recommov') }}" method="POST">
+                <div class = 'row mt-5 justify-content-around'>
+                    <div class="movieBox">
+                     <div class="imgBox">
+                         <img src= {{ randomMovs[0][2] }} style = " height: 400px ; width: 300px; ">
+                         <div class="movieTitle">
+                             <p><b>{{ randomMovs[0][3] }}</b></p>
+                             <input type="checkbox" name="mov0" value="{{ randomMovs[0][0] }}">
+                             <input type="number" name="mov0rat" min="1" max="5" style="border-radius: 17px">
+                         </div>
+
+                     </div>
+                     <a href="{{ randomMovs[0][1] }}">
+                       <div class="infoBox">
+                          <img src= {{ randomMovs[0][2] }} style="height: 50%" >
+                          <p>外文名:{{ randomMovs[0][4] }}</p>
+                          <p>评分:{{ randomMovs[0][5] }}  评分人数:{{ randomMovs[0][6] }}</p>
+                          <p>导演:{{ randomMovs[0][8] }}</p>
+                          <p>主演:{{ randomMovs[0][9] }}</p>
+                          <p>年份:{{ randomMovs[0][10] }} 地区:{{ randomMovs[0][11] }}</p>
+                          <p>类型:{{ randomMovs[0][12] }}</p>
+                      </div>
+                     </a>
+                 </div>
+                    <div class="movieBox">
+                     <div class="imgBox">
+                         <img src= {{ randomMovs[1][2] }} style = " height: 400px ; width: 300px; ">
+                         <div class="movieTitle">
+                             <p><b>{{ randomMovs[1][3] }}</b></p>
+                             <input type="checkbox" name="mov1" value="{{ randomMovs[1][0] }}">
+                             <input type="number" name="mov1rat" min="1" max="5" style="border-radius: 17px">
+                         </div>
+
+                     </div>
+                     <a href="{{ randomMovs[1][1] }}">
+                       <div class="infoBox">
+                          <img src= {{ randomMovs[1][2] }} style="height: 50%" >
+                          <p>外文名:{{ randomMovs[1][4] }}</p>
+                          <p>评分:{{ randomMovs[1][5] }}  评分人数:{{ randomMovs[1][6] }}</p>
+                          <p>导演:{{ randomMovs[1][8] }}</p>
+                          <p>主演:{{ randomMovs[1][9] }}</p>
+                          <p>年份:{{ randomMovs[1][10] }} 地区:{{ randomMovs[1][11] }}</p>
+                          <p>类型:{{ randomMovs[1][12] }}</p>
+                      </div>
+                     </a>
+                 </div>
+                    <div class="movieBox">
+                     <div class="imgBox">
+                         <img src= {{ randomMovs[2][2] }} style = " height: 400px ; width: 300px; ">
+                         <div class="movieTitle">
+                             <p><b>{{ randomMovs[2][3] }}</b></p>
+                             <input type="checkbox" name="mov2" value="{{ randomMovs[2][0] }}">
+                             <input type="number" name="mov2rat" min="1" max="5" style="border-radius: 17px">
+                         </div>
+
+                     </div>
+                     <a href="{{ randomMovs[2][1] }}">
+                       <div class="infoBox">
+                          <img src= {{ randomMovs[2][2] }} style="height: 50%" >
+                          <p>外文名:{{ randomMovs[2][4] }}</p>
+                          <p>评分:{{ randomMovs[2][5] }}  评分人数:{{ randomMovs[2][6] }}</p>
+                          <p>导演:{{ randomMovs[2][8] }}</p>
+                          <p>主演:{{ randomMovs[2][9] }}</p>
+                          <p>年份:{{ randomMovs[2][10] }} 地区:{{ randomMovs[2][11] }}</p>
+                          <p>类型:{{ randomMovs[2][12] }}</p>
+                      </div>
+                     </a>
+                 </div>
+                    <div class="movieBox">
+                     <div class="imgBox">
+                         <img src= {{ randomMovs[3][2] }} style = " height: 400px ; width: 300px; ">
+                         <div class="movieTitle">
+                             <p><b>{{ randomMovs[3][3] }}</b></p>
+                             <input type="checkbox" name="mov3" value="{{ randomMovs[3][0] }}">
+                             <input type="number" name="mov3rat" min="1" max="5" style="border-radius: 17px">
+                         </div>
+
+                     </div>
+                     <a href="{{ randomMovs[3][1] }}">
+                       <div class="infoBox">
+                          <img src= {{ randomMovs[3][2] }} style="height: 50%" >
+                          <p>外文名:{{ randomMovs[3][4] }}</p>
+                          <p>评分:{{ randomMovs[3][5] }}  评分人数:{{ randomMovs[3][6] }}</p>
+                          <p>导演:{{ randomMovs[3][8] }}</p>
+                          <p>主演:{{ randomMovs[3][9] }}</p>
+                          <p>年份:{{ randomMovs[3][10] }} 地区:{{ randomMovs[3][11] }}</p>
+                          <p>类型:{{ randomMovs[3][12] }}</p>
+                      </div>
+                     </a>
+                 </div>
+                    <div class="movieBox">
+                     <div class="imgBox">
+                         <img src= {{ randomMovs[4][2] }} style = " height: 400px ; width: 300px; ">
+                         <div class="movieTitle">
+                             <p><b>{{ randomMovs[4][3] }}</b></p>
+                             <input type="checkbox" name="mov4" value="{{ randomMovs[4][0] }}">
+                             <input type="number" name="mov4rat" min="1" max="5" style="border-radius: 17px">
+                         </div>
+
+                     </div>
+                     <a href="{{ randomMovs[4][1] }}">
+                       <div class="infoBox">
+                          <img src= {{ randomMovs[4][2] }} style="height: 50%" >
+                          <p>外文名:{{ randomMovs[4][4] }}</p>
+                          <p>评分:{{ randomMovs[4][5] }}  评分人数:{{ randomMovs[4][6] }}</p>
+                          <p>导演:{{ randomMovs[4][8] }}</p>
+                          <p>主演:{{ randomMovs[4][9] }}</p>
+                          <p>年份:{{ randomMovs[4][10] }} 地区:{{ randomMovs[4][11] }}</p>
+                          <p>类型:{{ randomMovs[4][12] }}</p>
+                      </div>
+                     </a>
+                 </div>
+                    <div class="movieBox">
+                     <div class="imgBox">
+                         <img src= {{ randomMovs[5][2] }} style = " height: 400px ; width: 300px; ">
+                         <div class="movieTitle">
+                             <p><b>{{ randomMovs[5][3] }}</b></p>
+                             <input type="checkbox" name="mov5" value="{{ randomMovs[5][0] }}">
+                             <input type="number" name="mov5rat" min="1" max="5" style="border-radius: 17px">
+                         </div>
+
+                     </div>
+                     <a href="{{ randomMovs[5][1] }}">
+                       <div class="infoBox">
+                          <img src= {{ randomMovs[5][2] }} style="height: 50%" >
+                          <p>外文名:{{ randomMovs[5][4] }}</p>
+                          <p>评分:{{ randomMovs[5][5] }}  评分人数:{{ randomMovs[5][6] }}</p>
+                          <p>导演:{{ randomMovs[5][8] }}</p>
+                          <p>主演:{{ randomMovs[5][9] }}</p>
+                          <p>年份:{{ randomMovs[5][10] }} 地区:{{ randomMovs[5][11] }}</p>
+                          <p>类型:{{ randomMovs[5][12] }}</p>
+                      </div>
+                     </a>
+                 </div>
+                 </div>
+
+                 <center style="margin-top: 30px">
+                    <input type="submit">
+                     <a href="/recommovR"> <botton>查看推荐的电影</botton> </a>
+                 </center>
+                <p>{{ viewer }}</p>
+
+            </form>
+       </div>
+     </div>
+      <!--end working --> 
+
+
+      <!--  footer -->
+      <footer>
+         <div class="footer">
+            <div class="copyright">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-md-8 offset-md-2">
+                        <p>Copyright &copy; mk310 name All rights reserved.</p>
+
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <!-- end footer -->
+   </body>
+</html>

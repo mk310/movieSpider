@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+       <!-- 引入刚刚下载的 ECharts 文件 -->
+       <script src="/static/assets/js/echarts.min.js"></script>
+      <!-- site metas -->
+      <title>豆瓣电影数据</title>
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="/static/assets/css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" href="/static/assets/css/style.css">
+       <script src="/static/assets/js/jquery.min.js"></script>
+   </head>
+   <!-- body -->
+   <body class="main-layout">
+      <!-- top -->
+      <!-- header -->
+      <header>
+        <ul>
+            <li><a href="/index"><b>主页</b></a></li>
+            <li><a href="/doubanmovie">豆瓣电影</a></li>
+            <li><a href="/imdbmovie">imdb电影</a></li>
+            <li><a href="/scorecompare">数据对比</a></li>
+            <li><a href="/word">词云</a></li>
+            <li><a href="/recommov">选电影</a></li>
+            <li><a href="/messageCenter">留言</a></li>
+        </ul>
+    </header>
+      <!-- end header -->
+      <div class="workArea">
+        <div class = 'container'>
+          <p></p>
+          <!-- 一 评分的柱状图-->
+          <div class="row" style="">
+              <!-- 为 ECharts 准备一个定义了宽高的 DOM -->
+              <div id="main" style="width: 1200px; height:400px "></div>
+          </div>
+
+
+          <!--二 地图的显示区-->
+          <div class="row" style="">
+              <!-- 国家 地图 显示 -->
+              <div class="row" style="">
+              <!-- 为 ECharts 准备一个定义了宽高的 DOM -->
+              <div id="main3" style="width: 700px; height:400px "></div>
+              </div>
+              <!--国家 饼图 显示-->
+              <div class="row" style="">
+                  <div id="main2" style="width: 400px; height:400px "></div>
+              </div>
+          </div>
+
+
+
+
+           <!--年份显示地区-->
+           <div class="row" style="">
+                  <!-- 为 ECharts 准备一个定义了宽高的 DOM -->
+                  <div id="main4" style="width: 1200px; height:400px "></div>
+          </div>
+
+
+
+          <!--电影类型的显示区-->
+              <div class="row" style="">
+                  <div id="main5" style="width: 1200px; height:400px "></div>
+              </div>
+      </div>
+      </div>
+
+
+
+{#第一个图的配置 评分的柱状图#}
+<script type="text/javascript">
+    var dom = document.getElementById("main");
+    var myChart = echarts.init(dom);
+    var app = {};
+    var option;
+    option = {
+      title: {
+        text: '豆瓣评分各区间个数',
+          textStyle: {
+            color: 'black'
+          },
+          borderWidth: 5,
+          borderColor: 'black' ,//边框颜色
+          borderRadius: 5       //边框厚度
+      },
+      // backgroundColor:  'rgba(249,192,84,0.99)',
+      toolbox:{
+          feature:{
+              dataView: {},
+              dataZoom:{}
+          }
+      },
+      tooltip: {}, //鼠标移动显示柱状图数值
+      xAxis: {
+        type: 'category', //类目轴
+        data: {{ score }}
+      },
+      yAxis: {
+        type: 'value'  //值轴
+      },
+      series: [
+        {  emphasis: {
+                itemStyle: {
+                // 高亮时点的颜色。
+                color: 'blue'
+                },
+                label: {
+                show: true,
+                }
+            },
+          data: {{ num }},
+          type: 'bar',
+          markPoint:{                           //最大值，最小值
+              data:[{type: 'max', name: '最大值'},
+                  {type:'min',name:'最小值'}
+              ]
+          },
+          markLine:{                               //平均值
+              data:[{type:'average',name:'平均线'}]
+          },
+          showBackground: true,
+          backgroundStyle: {
+            color: 'rgba(53,75,107,0.99)'
+          }
+        }
+      ]
+    };
+
+    if (option && typeof option === 'object') {
+        myChart.setOption(option);
+    }
+    </script>
+
+{#第二个图的配置 地区的饼图#}
+<script type="text/javascript">
+    var dom = document.getElementById("main2");
+    var myChart2 = echarts.init(dom);
+    var app = {};
+    var option;
+    option = {
+
+      tooltip: {},
+      toolbox: {
+          feature: {
+              dataView: {},
+          }
+      },
+
+      series: [
+        {data:[
+                {% for item in country %}
+                {name:'{{item[0]}}',value:{{item[1]}}},
+                {% endfor %}
+        ],
+        type: 'pie',
+        showBackground: true,
+        backgroundStyle: {
+        color: 'rgba(53,75,107,0.99)'
+        },
+        label: {
+            show: true,
+            formatter: function (arg) {
+                //console.log(arg)
+                return arg.name + '占比'  + arg.percent +'%'
+            }
+        },
+        {#roseType: 'area'#}
+        }
+      ]
+    };
+
+    if (option && typeof option === 'object') {
+        myChart2.setOption(option);
+    }
+    </script>
+
+{#第二个图的配置 地区的地图#}
+<script type="text/javascript">
+       var movData = [
+           {% for data in country %}
+      { name: '{{ countryName[data[0]] }}', value: {{ data[1] }} },
+           {% endfor %}
+
+    ]
+
+    var dom = document.getElementById("main3");
+    var myChart3 = echarts.init(dom);
+    var app = {};
+    $.get('/static/assets/json/countries.geo.json', function (ret) {
+      // ret 就是世界的各个国家的矢量地图数据
+      console.log(ret)
+      echarts.registerMap('worldMap', ret)
+      var option = {
+        title: {
+
+        },
+        geo: {
+          type: 'map',
+          map: 'worldMap', // chinaMap需要和registerMap中的第一个参数保持一致
+          roam: true, // 设置允许缩放以及拖动的效果
+        },
+        series: [
+          {
+            data: movData,
+            geoIndex: 0, // 将空气质量的数据和第0个geo配置关联在一起
+            type: 'map'
+          },
+        ],
+        visualMap: {
+          min: 0,
+          max: 66,
+          inRange: {
+            color: ['pink', 'red'] // 控制颜色渐变的范围
+          },
+          calculable: true // 出现滑块
+        }
+      }
+     if (option && typeof option === 'object') {
+        myChart3.setOption(option);
+    }
+    })
+
+
+
+    </script>
+
+{#第三个图的配置 年代的曲线图 #}
+<script type="text/javascript">
+    var dom = document.getElementById("main4");
+    var myChart4 = echarts.init(dom);
+    var app = {};
+    var option;
+    option = {
+      title: {
+        text: '豆瓣评分各年代个数',
+          textStyle: {
+            color: 'red'
+          },
+          borderWidth: 5,
+          // borderColor: 'green' ,//边框颜色
+          borderRadius: 5       //边框厚度
+      },
+     
+      toolbox:{
+          feature:{
+              dataView: {},
+              dataZoom:{}
+          }
+      },
+      tooltip: {}, //鼠标移动显示柱状图数值
+      xAxis: {
+        type: 'category', //类目轴
+        data: {{ year }}
+      },
+      yAxis: {
+        type: 'value'  //值轴
+      },
+      series: [
+        {  emphasis: {
+                itemStyle: {
+                // 高亮时点的颜色。
+                color: 'blue'
+                },
+                label: {
+                show: true,
+                }
+            },
+          data: {{ yearnum }},
+          type: 'line',
+          markPoint:{                           //最大值，最小值
+              data:[{type: 'max', name: '最大值'},
+                  {type:'min',name:'最小值'}
+              ]
+          },
+          showBackground: true,
+
+        }
+      ]
+    };
+
+    if (option && typeof option === 'object') {
+        myChart4.setOption(option);
+    }
+    </script>
+
+{#第四个图的配置 类型的饼状图 #}
+<script type="text/javascript">
+    var dom = document.getElementById("main5");
+    var myChart5 = echarts.init(dom);
+    var app = {};
+    var option;
+    option = {
+
+      tooltip: {},
+      toolbox: {
+          feature: {
+              dataView: {},
+          }
+      },
+
+      series: [
+        {data:[
+
+        type: 'pie',
+        showBackground: true,
+        backgroundStyle: {
+        color: 'rgba(53,75,107,0.99)'
+        },
+        label: {
+            show: true,
+            formatter: function (arg) {
+                //console.log(arg)
+                return arg.name + '占比'  + arg.percent +'%'
+            }
+        },
+        {#roseType: 'ridus'  //南丁格尔图#}
+        }
+      ]
+    };
+
+    if (option && typeof option === 'object') {
+        myChart5.setOption(option);
+    }
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <!--  footer -->
+      <footer>
+         <div class="footer">
+            <div class="copyright">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-md-8 offset-md-2">
+                        <p>Copyright &copy; mk310 name All rights reserved.</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <!-- end footer -->
+      <!-- Javascript files-->
+
+   </body>
+</html>

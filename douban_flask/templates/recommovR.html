@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head style="box-shadow: 0px 0px 8px 5px">
+      <!-- basic -->
+      <meta charset="utf-8">
+       <meta name="referrer" content="no-referrer" /> <!--可以让img标签预加载网络图片-->
+
+      <!-- site metas -->
+      <title>movie</title>
+        <title>推荐电影结果页</title>
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="static/assets/css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" href="static/assets/css/style.css">
+
+   </head>
+   <!-- body -->
+   <body class="main-layout">
+      <!-- top -->
+      <!-- header -->
+      <header>
+         <ul>
+             <li><a href="/index"><b>主页</b></a></li>
+             <li><a href="/doubanmovie">豆瓣电影</a></li>
+             <li><a href="/imdbmovie">imdb电影</a></li>
+             <li><a href="/scorecompare">数据对比</a></li>
+             <li><a href="/word">词云</a></li>
+             <li><a href="/recommov">选电影</a></li>
+             <li><a href="/messageCenter">留言</a></li>
+         </ul>
+     </header>
+      <!-- end header -->
+
+                      <!-- working -->
+    <div class="workArea" style="text-align: center;">
+        <p>--head--</p>
+        <div class = 'container'>
+                <table class="table table-hover" style="margin-top: 20px;background-color: rgb(250, 251, 251); border-radius: 17px;">
+                    <thead>
+                    <tr>
+                        <th>最相似用户id</th>
+                        <th>相同喜欢电影</th>
+                        <th>相同喜欢的电影数量</th>
+                        <th>评分的平均差值</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    <tr>
+                        <td>{{ similarlestUser[0][0] }}</td>
+
+                        <td>{% for id in similarlestUser[0][1]  %}
+                                {{movies[id][3] }},
+                            {% endfor %}
+                        </td>
+                        <td>{{ similarlestUser[0][2]}}</td>
+                        <td>{{ similarlestUser[0][3] }}</td>
+                    </tr>
+                    </tbody>
+                </table>
+
+                <p>--推荐的电影如下--</p>
+        <div class = 'row mt-5 justify-content-around'>
+                {% for movie in similarlestUser[0][4] %}
+
+                  <div class="movieBox">
+                      <div class="imgBox">
+                          <img src= {{ movies[movie-1][2] }} style="height: 400px ; width: 300px;">
+                          <div class="movieTitle"><p><b>{{ movies[movie-1][3] }}</b></p></div>
+                      </div>
+                      <a href="{{movies[movie-1][1]}}">
+                        <div class="infoBox">
+                           <img src= {{ movies[movie-1][2] }} style="height: 50%" >
+                           <div class="movieTitle"><p>{{ movies[movie-1][3] }}</p></div>
+                           <p>外文名:{{ movies[movie-1][4] }}</p>
+                           <p>评分:{{ movies[movie-1][5] }}  评分人数:{{ movies[movie-1][6] }}</p>
+                           <p>导演:{{ movies[movie-1][8] }}</p>
+                           <p>主演:{{ movies[movie-1][9] }}</p>
+                           <p>年份:{{ movies[movie-1][10] }}  地区:{{ movies[movie-1][11] }}</p>
+                           <p>类型:{{ movies[movie-1][12] }}</p>
+                       </div>
+                      </a>
+                  </div>
+                {% endfor %}
+            </div>
+      </div>
+   </div>
+      <!--end working -->
+
+      <!--  footer -->
+      <footer>
+         <div class="footer">
+            <div class="copyright">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-md-8 offset-md-2">
+                        <p>Copyright &copy; mk310 name All rights reserved.</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <!-- end footer -->
+   </body>
+</html>

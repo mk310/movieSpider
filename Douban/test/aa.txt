@@ -1,0 +1,866 @@
+'''
+        <!DOCTYPE html>
+
+<html lang="zh">
+<head>
+<meta charset="utf-8"/>
+<title>肖申克的救赎,The Shawshank Redemption(1994) – IMDB爱影库</title>
+<meta content="width=device-width, initial-scale=1.0, user-scalable=no" name="viewport"/>
+<meta content="肖申克的救赎,The Shawshank Redemption,影评,简介,剧情,图片,评分,视频,影讯" name="keywords"/>
+<meta content="肖申克的救赎,The Shawshank Redemption由 弗兰克·德拉邦特执导,保罗·麦克兰尼、蒂姆·罗宾斯、摩根·弗里曼 主演的电影,两名被囚禁的人在长达数年的时间里建立了友谊，并通过日常生活中的基本礼节寻求到了安慰和最终的救赎。" name="description"/>
+<meta content="IMDb中文网" name="author"/>
+<link href="https://pic.imdb.cn/static/assets/img/imdb.ico" rel="shortcut icon"/>
+<link href="https://pic.imdb.cn/static/assets/css/common.css?v=1.02.069" rel="stylesheet"/>
+<script src="https://pic.imdb.cn/static/assets/libs/jquery/dist/jquery.min.js"></script>
+<script src="https://pic.imdb.cn/static/assets/js/frontend/socket.io.js"></script>
+<script src="https://pic.imdb.cn/static/assets/js/lib/layer/layer.js"></script>
+<script src="https://pic.imdb.cn/static/assets/js/frontend/common.js?v=1.02.069"></script>
+<!-- <link href="https://pic.imdb.cn/static/assets/css/frontend.min.css?v=1.02.069" rel="stylesheet"> -->
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+<!--[if lt IE 9]>
+  <script src="https://pic.imdb.cn/static/assets/js/html5shiv.js"></script>
+  <script src="https://pic.imdb.cn/static/assets/js/respond.min.js"></script>
+<![endif]-->
+<link href="/assets/css/star.css?v=1.02.069" rel="stylesheet"/>
+<link href="https://pic.imdb.cn/static/assets/css/grade.css?v=1.02.069" rel="stylesheet"/>
+<link href="https://pic.imdb.cn/static/assets/css/video_com.css?v=1.02.069" rel="stylesheet"/>
+<link href="https://pic.imdb.cn/static/assets/css/m_discussion.css?v=1.02.069" rel="stylesheet"/>
+<script src="https://pic.imdb.cn/static/assets/js/frontend/grade.js?v=1.02.069"></script>
+<script src="/assets/js/frontend/edit_form.js?v=1.02.069"></script>
+</head>
+<body>
+<div class="main">
+<div class="userNav clearer">
+<div class="userCon">
+<div class="userLogo">
+<a href="https://www.iyingku.cn/" title="IMDb中文网"><img alt="IMDb中文网" src="https://pic.imdb.cn/static/images/logo.png"/></a>
+</div>
+<div class="search">
+<div class="search-tab"><a class="selected" href="javascript:;"><span>全部</span><span> </span><span class="search-arrow"></span></a>
+<ul class="hide">
+<a class="tab-selected select_first" data-st="" href="javascript:;">全部</a>
+<a data-st="movie" href="javascript:;">电影</a>
+<a data-st="tv" href="javascript:;">电视剧</a>
+<a data-st="person" href="javascript:;">人物</a>
+<a data-st="keyword" href="javascript:;">关键词</a>
+<a class="select_last" data-st="search" href="/filter/" target="_blank">高级搜索</a>
+</ul>
+<i></i>
+</div>
+<div class="search-panel">
+<form action="/search_index" method="get">
+<input autocomplete="off" class="search-query local-search-input st-default-search-input" name="keywords" placeholder="电影、电视剧" type="text"/>
+<input id="search_st" name="st" type="hidden" value=""/>
+<button class="iconfont" type="submit"></button>
+</form>
+</div>
+<div class="search-dropdown hide"></div>
+</div>
+<ul class="list" id="navs">
+<li class="list-item l_it"><a href="/" rel="/">首页</a></li>
+<li class="list-item l_it"><a class="tabOn" href="/movies/" rel="/movies/">影视</a></li>
+<li class="list-item l_it"><a href="/persons/" rel="persons">人物</a></li>
+<li class="list-item l_it"><a href="/news/" rel="news/">资讯</a></li>
+<li class="list-item l_it"><a href="/imdb250/" rel="imdb250/">排行</a></li>
+<li class="list-item"><a href="/awards/" rel="awards/">奖项</a></li>
+</ul>
+</div>
+</div>
+<div class="star_container clear" id="share_container">
+<div class="star_con_l fl">
+<div class="per_info">
+<div class="pic_info fl">
+<img alt="肖申克的救赎" onerror="this.src='https://pic.imdb.cn/static/images/nopic.png'" src="https://pic.imdb.cn/upload/other/2020/06/22/1d0679a4e5afecf8cf497fb6da2dc099.jpg?imageView2/1/format/jpg/w/220/h/330">
+<div class="addlists">
+<div class="listbox">
+<h4>
+<a href="javascript:;"><span class="iconfont"></span>添加到</a><span class="iconfont"></span>
+</h4>
+<div class="listcon">
+<div class="listcon_tab"><span class="listcon_tab_active">列表</span><span>片单</span></div>
+<div class="listcon_list">
+<ul>
+<li><a class="userAddList" href="javascript:;">收藏</a></li>
+<li><a class="userAddList" href="javascript:;">+添加新列表</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</img></div>
+<div class="per_txt fr">
+<h1>
+<div>
+        肖申克的救赎,The Shawshank Redemption <span>(1994)</span> </div>
+</h1>
+<div class="txt_bottom">
+<div class="edit_button">
+<a class="e_modify_btn" data-location="subject" data-movie_id="37164" data-source="subject" data-type="video" href="javascript:;"><img alt="编辑" src="https://pic.imdb.cn/static/images/edit_icon.png"/>编辑</a>
+</div>
+<div class="txt_bottom_item">
+<div class="txt_bottom_l">导演：</div>
+<div class="txt_bottom_r txt_bottom_r_overflow">
+<a href="/name/nm0001104/">弗兰克·德拉邦特</a>
+</div>
+</div>
+<div class="txt_bottom_item">
+<div class="txt_bottom_l">编剧：</div>
+<div class="txt_bottom_r txt_bottom_r_overflow">
+<a href="/name/nm0001104/">弗兰克·德拉邦特</a>
+            /            <a href="/name/nm0001104/">弗兰克·德拉邦特</a>
+</div>
+</div>
+<div class="txt_bottom_item">
+<div class="txt_bottom_l">主演：</div>
+<div class="txt_bottom_r txt_bottom_r_overflow">
+<a href="/name/nm0005204/">保罗·麦克兰尼</a>
+             /            <a href="/name/nm0000209/">蒂姆·罗宾斯</a>
+             /            <a href="/name/nm0000151/">摩根·弗里曼</a>
+             /            <a href="/name/nm0348409/">鲍勃·冈顿</a>
+             /            <a href="/name/nm0006669/">威廉姆·赛德勒</a>
+</div>
+</div>
+<div class="txt_bottom_item">
+<div class="txt_bottom_l">类型：</div>
+<div class="txt_bottom_r">
+                     剧情        </div>
+</div>
+<div class="txt_bottom_item">
+<div class="txt_bottom_l">制片国家/地区：</div>
+<div class="txt_bottom_r">美国</div>
+</div>
+<div class="txt_bottom_item">
+<div class="txt_bottom_l">语言：</div>
+<div class="txt_bottom_r">
+          英语        </div>
+</div>
+<div class="txt_bottom_item">
+<div class="txt_bottom_l">上映日期：</div>
+<div class="txt_bottom_r">
+                1994-09-10(美国)    </div>
+</div>
+<div class="txt_bottom_item">
+<div class="txt_bottom_l">片长：</div>
+<div class="txt_bottom_r">142分钟</div>
+</div>
+<div class="txt_bottom_item">
+<div class="txt_bottom_l">别名：</div>
+<div class="txt_bottom_r">
+          Die Verurteilten/Les évadés/Shôshanku no sora ni        </div>
+</div>
+</div>
+</div>
+</div>
+<!-- 简介-->
+<div class="per_profile" id="movie_desc">
+<div class="title_line clear">
+<h3>简介</h3>
+<div class="line_title1"></div>
+</div>
+<div class="profile_con" id="movie_desc_content" style="max-height: 200px;overflow: hidden">
+<p>两名被囚禁的人在长达数年的时间里建立了友谊，并通过日常生活中的基本礼节寻求到了安慰和最终的救赎。</p>
+</div>
+</div>
+<!-- 图片视频start -->
+<div class="pic_video">
+<div class="title_line clear">
+<h3><span>图片</span><a href="/title/tt0111161/photos">（25）</a></h3>
+<div class="line_title1"></div>
+</div>
+<div class="pic_vlist clear">
+<ul class="clear">
+<li>
+<a href="/title/tt0111161/image/1328">
+<img alt="肖申克的救赎" onerror="this.src='https://pic.imdb.cn/static/images/nopics.png'" src="https://pic.imdb.cn/upload/other/2020/06/22/692b670bbc189681712d80bfb41787b2.jpg?imageView2/1/format/jpg/w/200/h/200"/>
+</a>
+</li>
+<li>
+<a href="/title/tt0111161/image/1327">
+<img alt="肖申克的救赎" onerror="this.src='https://pic.imdb.cn/static/images/nopics.png'" src="https://pic.imdb.cn/upload/other/2020/06/22/fe48ebe7518334c0f06a84ca796aa47e.jpg?imageView2/1/format/jpg/w/200/h/200"/>
+</a>
+</li>
+<li>
+<a href="/title/tt0111161/image/1326">
+<img alt="肖申克的救赎" onerror="this.src='https://pic.imdb.cn/static/images/nopics.png'" src="https://pic.imdb.cn/upload/other/2020/06/22/e569a75c7b17ee990ec73cfd202db10b.jpg?imageView2/1/format/jpg/w/200/h/200"/>
+</a>
+</li>
+<li>
+<a href="/title/tt0111161/image/1325">
+<img alt="肖申克的救赎" onerror="this.src='https://pic.imdb.cn/static/images/nopics.png'" src="https://pic.imdb.cn/upload/other/2020/06/22/6a0a1bea2242994508a097a37d0d99f1.jpg?imageView2/1/format/jpg/w/200/h/200"/>
+</a>
+</li>
+<li>
+<a href="/title/tt0111161/image/699">
+<img alt="肖申克的救赎" onerror="this.src='https://pic.imdb.cn/static/images/nopics.png'" src="https://pic.imdb.cn/upload/star/2020/06/18/e511d49b010b78260db9358984945dd9.png?imageView2/1/format/jpg/w/200/h/200"/>
+</a>
+</li>
+</ul>
+</div> </div>
+<!-- 图片视频end -->
+<!-- 获奖start -->
+<div class="star_prize" id="awards_table">
+<div class="title_line clear">
+<h3>获奖</h3>
+<div class="line_title1"></div>
+</div>
+<div class="prizebox">
+<p class="tvprizep">
+<span>提名（24）</span><span>获奖（16）</span> </p>
+<p class="tvprizepp"><span>奥斯卡金像奖</span><span><a href="/awards/1/nomination/1995">1995</a></span>
+</p>
+<div class="prize_con">
+<table border="1px solid #ccc" class="tvprize_table">
+<tr>
+<td class="tablelf" rowspan="7" width="295">
+<p>提名</p>
+<p>奥斯卡金像奖</p>
+</td>
+<td>
+<p>最佳男主角</p>
+<p><a href="/name/nm0000151/">摩根·弗里曼</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p>最佳摄影</p>
+<p><a href="/name/nm0005683/">罗杰·狄金斯</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p>最佳影片</p>
+<p><a href="/name/nm0555550/">妮基·马文</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p>最佳剪辑</p>
+<p><a href="/name/nm0290358/">理查德·弗朗西斯</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p>最佳原创配乐</p>
+<p><a href="/name/nm0002353/">托马斯·纽曼</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p>最佳音响</p>
+<p><a href="/name/nm0514448/">Robert J. Litt</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p>最佳改编剧本</p>
+<p><a href="/name/nm0001104/">弗兰克·德拉邦特</a></p>
+</td>
+</tr>
+</table>
+<a class="more" href="/title/tt0111161/awards">更多&gt;</a>
+</div>
+</div>
+</div>
+<!-- 获奖end -->
+<!-- 演职员表start-->
+<div class="music_works tv_mworks" id="star_table">
+<div class="title_line clear">
+<h3>演职员表</h3>
+<div class="line_title1"></div>
+</div>
+<div class="danqu">
+<h2 class="tvposttitle"><span>演员表</span></h2>
+<table class="tvactortable" width="883">
+<tr>
+<td><img alt="保罗·麦克兰尼" onerror="this.src='https://pic.imdb.cn/static/images/nophoto.png'" src="https://pic.imdb.cn/upload/star/2019/25/105/wfp3wrewe4413.jpg?imageView2/1/format/jpg/w/50/h/50"/></td>
+<td>
+<a href="/name/nm0005204/">
+                                                保罗·麦克兰尼                                            </a>
+                                             (Paul McCrane)                                </td>
+<td>饰</td>
+<td>Guard Trout</td>
+</tr>
+<tr>
+<td><img alt="蒂姆·罗宾斯" onerror="this.src='https://pic.imdb.cn/static/images/nophoto.png'" src="https://pic.imdb.cn/upload/star/2019/06/107/waq4mc52eks23.jpg?imageView2/1/format/jpg/w/50/h/50"/></td>
+<td>
+<a href="/name/nm0000209/">
+                                                蒂姆·罗宾斯                                            </a>
+                                             (Tim Robbins)                                </td>
+<td>饰</td>
+<td>Andy Dufresne</td>
+</tr>
+<tr>
+<td><img alt="摩根·弗里曼" onerror="this.src='https://pic.imdb.cn/static/images/nophoto.png'" src="https://pic.imdb.cn/upload/other/2021/01/02/5ff07b7372274.jpg?imageView2/1/format/jpg/w/50/h/50"/></td>
+<td>
+<a href="/name/nm0000151/">
+                                                摩根·弗里曼                                            </a>
+                                             (Morgan Freeman)                                </td>
+<td>饰</td>
+<td>Ellis Boyd 'Red' Redding</td>
+</tr>
+<tr>
+<td><img alt="鲍勃·冈顿" onerror="this.src='https://pic.imdb.cn/static/images/nophoto.png'" src="https://pic.imdb.cn/upload/star/2019/02/102/m4j4csvx0wa22.jpg?imageView2/1/format/jpg/w/50/h/50"/></td>
+<td>
+<a href="/name/nm0348409/">
+                                                鲍勃·冈顿                                            </a>
+                                             (Bob Gunton)                                </td>
+<td>饰</td>
+<td>Warden Norton</td>
+</tr>
+<tr>
+<td><img alt="威廉姆·赛德勒" onerror="this.src='https://pic.imdb.cn/static/images/nophoto.png'" src="https://pic.imdb.cn/upload/star/2019/02/103/2d3gc4nmkme47.jpg?imageView2/1/format/jpg/w/50/h/50"/></td>
+<td>
+<a href="/name/nm0006669/">
+                                                威廉姆·赛德勒                                            </a>
+                                             (William Sadler)                                </td>
+<td>饰</td>
+<td>Heywood</td>
+</tr>
+</table>
+</div>
+<a class="more" href="/title/tt0111161/cast">更多&gt;</a>
+</div>
+<!-- 演职员表end-->
+<!-- 剧情介绍start-->
+<div class="per_profile" id="tv_plot">
+<div class="title_line clear">
+<h3>剧情介绍</h3>
+<div class="line_title1"></div>
+</div>
+<div class="episode_con" id="movie_content" style="overflow: hidden">
+<p>1947年，年轻有为的青年银行家安迪（<a href="/name/nm0000209/" target="_self">蒂姆·罗宾斯 </a>Tim Robbins 饰）被指控杀了他的妻子和其情人，以谋杀罪被判无期徒刑，他的余生都将在肖申克监狱里度过。</p><p><br/></p><p style="text-align:center"><img alt="1.jpg" height="449" src="https://pic.imdb.cn/upload/other/2020/08/09/7fcc7bf9e5198ff7abfc8dbd97b4a0cf.jpg" style="width: 600px; height: 449px;" title="1.jpg" width="600"/></p><p><br/></p><p>瑞德（<a href="/name/nm0000151/" target="_self">摩根·弗里曼</a> Morgan Freeman 饰）是一位已经在肖申克待了二十年的老犯人，屡屡申请假释都被驳回，如今，他已经混成了犯人中的“权威人物”，只要给钱，他能帮犯人买到</p> </div>
+</div>
+<!-- 剧情介绍end-->
+<!-- 关键词start -->
+<div class="occupation" id="tv_keyword">
+<div class="title_line clear">
+<h3>关键词</h3>
+<div class="line_title1"></div>
+</div>
+<ul class="tvkw_link clear">
+<li><a href="javascript:;9018">基于斯蒂芬·金的作品</a></li>
+<li>|</li>
+<li><a href="javascript:;3606">旁白旁白</a></li>
+<li>|</li>
+<li><a href="javascript:;295">监狱</a></li>
+<li>|</li>
+<li><a href="javascript:;3141">越狱</a></li>
+<li>|</li>
+<li><a href="javascript:;4237">非法监禁</a></li>
+</ul>
+<a class="more" href="/title/tt0111161/keywords">更多&gt;</a>
+</div>
+<!-- 关键词end -->
+<!-- 经典台词start-->
+<div class="occupation" id="tv_lines">
+<div class="title_line clear">
+<h3>经典台词</h3>
+<div class="line_title1"></div>
+</div>
+<ul>
+<li>
+                                                        It takes a strong man to save himself, and a great man to save another.<br/>                             强者救赎自己，圣人普度他人。                        </li>
+<li>
+                                                        I guess it comes down to a simple choice:get busy living or get busy dying.<br/>                             生命可以归结为一种简单的选择：要么忙于生存，要么赶着去死。                        </li>
+<li>
+                                                        These walls are kind of funny like that. First you hate them, then you get used to them. Enough time passed, get so you depend on them. That's institutionalized.<br/>                             监狱里的高墙实在是很有趣。刚入狱的时候，你痛恨周围的高墙；慢慢地，你习惯了生活在其中；最终你会发现自己不得不依靠它而生存。 这就是体制化。                        </li>
+<a class="more" href="/title/tt0111161/slogans">更多&gt;</a>
+</ul>
+</div>
+<!-- 经典台词end-->
+<!-- 细节 start -->
+<div class="remuneration">
+<div class="title_line clear">
+<h3>细节</h3>
+<div class="line_title1"></div>
+</div>
+<div class="movie_detail_con">
+<p class="mov_delist"><b>上映日期：</b>
+<span>
+                                1994-09-10                            </span><a href="/title/tt0111161/issued">更多 &gt; </a></p>
+<p class="mov_delist"><b>又称：</b><span>Die Verurteilten/Les évadés/Shôshanku no sora ni </span><a href="/title/tt0111161/issued">更多 &gt; </a></p>
+<p class="mov_delist"><b>取景地点：</b>
+<span>
+                                                                    美国俄亥俄州阿什兰银行及巴士站                                    桑迪点，圣克罗伊，美属维尔京群岛泳滩景尾                            </span>
+<a href="/title/tt0111161/film">更多 &gt; </a>
+</p>
+<p>
+<b>技术参数：</b>
+<ul>
+<li>时长：<span>142分钟</span></li>
+<li class="mov_a">声音混合： 杜比数码   SDDS                                </li>
+<li>纵横比：<span>1.85 : 1</span></li>
+<div class="moreBox"><a class="more" href="/title/tt0111161/technical">更多&gt;</a></div>
+</ul>
+</p>
+</div>
+</div>
+<!-- 细节 end -->
+<!-- 主创公司 start -->
+<div class="occupation movie_box" id="company_table">
+<div class="title_line clear">
+<h3>主创公司</h3>
+<div class="line_title1"></div>
+</div>
+<div class="movie_conpany_con">
+<table cellpadding="" cellspacing="" class="mcon_table">
+<tbody>
+<tr class="mct-item2">
+<td rowspan="1" style="font-weight:700;">
+                                        出品公司                                        </td>
+<td style="text-align: left;padding-left:20px;">
+                                            城堡石娱乐公司 (presents)                                        </td>
+</tr>
+<tr class="mct-item2">
+<td rowspan="7" style="font-weight:700;">
+                                        发行公司                                        </td>
+<td style="text-align: left;padding-left:20px;">
+                                            Producciones JRB (2002) (DVD) (Spain)                                        </td>
+</tr>
+<tr class="mct-item2">
+<td style="text-align: left;padding-left:20px;">
+                                            Producciones JRB (2002) (TV) (Spain)                                        </td>
+</tr>
+<tr class="mct-item2">
+<td style="text-align: left;padding-left:20px;">
+                                            ci Vertriebsgemeinschaft (1995) (Theatrical) (Germany)                                        </td>
+</tr>
+<tr class="mct-item2">
+<td style="text-align: left;padding-left:20px;">
+                                            Filmayer (1995) (Theatrical) (Spain)                                        </td>
+</tr>
+<tr class="mct-item2">
+<td style="text-align: left;padding-left:20px;">
+                                            Rank Film Organization (1995) (Theatrical) (United Kingdom) (as Rank Film Distributors)                                        </td>
+</tr>
+<tr class="mct-item2">
+<td style="text-align: left;padding-left:20px;">
+                                            VCI Distribution (VHS) (United Kingdom)                                        </td>
+</tr>
+<tr class="mct-item2">
+<td style="text-align: left;padding-left:20px;">
+                                            Guild Home Video (VHS) (United Kingdom)                                        </td>
+</tr>
+</tbody>
+</table>
+</div>
+<a class="more" href="/title/tt0111161/companys">更多&gt;</a>
+</div>
+<!-- 主创公司 end -->
+<!-- 票房 start -->
+<div class="booking" id="boxoffice_list">
+<div class="title_line clear">
+<h3>票房</h3>
+<div class="line_title1"></div>
+</div>
+<table class="boxoffice_con">
+<tbody>
+<tr><td>预算</td><td>$25,000,000 (估算)</td></tr>
+<tr><td>首映票房（美国）</td><td>$727,327, 25 September 1994</td></tr>
+<tr><td>总票房（美国）</td><td>$28,699,976 </td></tr>
+<tr><td>全球累计票房</td><td>$28,786,657 </td></tr>
+</tbody>
+</table>
+<a class="more" href="/title/tt0111161/boxoffice">更多&gt;</a>
+</div>
+<!-- 幕后花絮start -->
+<div class="occupation" id="sidelights_list">
+<div class="title_line clear">
+<h3>幕后花絮</h3>
+<div class="line_title1"></div>
+</div>
+<ul>
+<li><p>当安迪（Andy）以布鲁克斯的助手到图书馆开始工作，布鲁克斯的乌鸦杰克（Jake）叫时，蒂姆·罗宾斯（Tim Robbins）必须安排他的台词“嘿，杰克。布鲁克斯在哪里？” 以便乌鸦不会在他身上咆哮，因为这只鸟不能被训练成在提示时尖叫。罗宾斯能够通过学习鸟的s叫模式来完美地安排自己的路线，为此作家/导演弗兰克·达拉邦特（Frank Darabont）称赞了他。</p> </li>
+<li>Andy and Red's opening chat in the prison yard, in which Red is throwing a baseball, took nine hours to shoot. <a href="/name/nm0000151/">摩根·弗里曼</a> threw the baseball for the entire nine hours without a word of complaint. He showed up for work the next day with his left arm in a sling. </li>
+<li><a href="/name/nm0000151/">摩根·弗里曼</a>'s favorite film of his own. </li>
+</ul>
+<a class="more" href="/title/tt0111161/goofs">更多&gt;</a>
+</div>
+<!-- 幕后花絮end -->
+<!-- 穿帮镜头start -->
+<div class="occupation" id="mistake_list">
+<div class="title_line clear">
+<h3>穿帮镜头</h3>
+<div class="line_title1"></div>
+</div>
+<ul>
+<li><p>假释人员在1947年使用的邮票印有Helvetica字体，直到1957年才发明。</p></li>
+</ul>
+<a class="more" href="/title/tt0111161/goofs">更多&gt;</a>
+</div>
+<!-- 穿帮镜头end -->
+<!-- 其他版本start -->
+<div class="occupation" id="other_list">
+<div class="title_line clear">
+<h3>其他版本</h3>
+<div class="line_title1"></div>
+</div>
+<ul>
+<li><p>一场HBO节目包括Morgan Freeman引入的三个额外场景。Red获释后，其中一个场景显示Red误认为女人不再戴胸罩了。另一个较早删除的场景显示了更多有关安迪逃生路线的信息，其中包括一名警卫，他被下岗，当他意识到下水道被破坏时便抛出。听到此消息并意识到安迪成功逃脱后，雷德开始在自己的牢房里歇斯底里地大笑，为此他被送进了单独的监禁室，并在这里继续大笑。</p></li>
+</ul>
+<a class="more" href="/title/tt0111161/otherversions">更多&gt;</a>
+</div>
+<!-- 其他版本end -->
+<!-- 用户评论 start -->
+<div class="occupation">
+<div class="title_line clear" id="comment_list">
+<h3>用户评论</h3>
+<div class="line_title1"></div>
+</div>
+<div class="movie_comment——con">
+<link href="https://pic.imdb.cn/static/assets/css/comments.css?v=1.02.069" rel="stylesheet"/>
+<script src="https://pic.imdb.cn/static/assets/js/frontend/comments.js?v=1.02.069"></script>
+<div style="width: 100%;">
+<div data-article-id="0111161" data-article-type="movie" id="Z_comment">
+<div class="short clear">
+<p class="short_title1 fl"><b>短评</b><span>(<span class="comment_total">2</span>)</span></p>
+<p class="short_title short_title2 fr">
+<a href="javascript:;">
+<span class="iconfont"></span><span>写短评</span>
+</a>
+</p>
+</div>
+<div class="n_message clear" style="display: none">
+<div style="position: relative;">
+<i class="iconfont up_arrow" style="right: 32px;"></i><span class="cover" style="right: 25px;"></span>
+</div>
+<form action="">
+<textarea class="form-control content Z_add_comment" cols="64" name="content" placeholder="请输入简短评论（1-150个字）" rows="4"></textarea>
+<div class="action_btn">
+<button class="cancel" type="button">取消</button><button class="publish" type="button">发表</button>
+</div>
+</form>
+</div>
+</div>
+<div class="comment_list">
+<div class="comment_item" data-comment-id="3635">
+<div class="comment_item_body">
+<div class="commen_hd" data-uid="">
+<a href="/u/"><img alt="" onerror="this.src='https://pic.imdb.cn/static/images/nophoto.png'" src="https://pic.imdb.cn/static/images/nophoto.png"/></a>
+<a href="/u/"></a>
+<span>2021-08-17</span>
+</div>
+<div class="commen_bd">
+<div class="commen_des">希望的演绎，人性的向上，人性还在，就是永远的经典。</div>
+<div class="commen_action">
+<span><a class="iconfont adddig" data-digobj="comments_3635_1" href="javascript:;">(<i class="dignum">0</i>)</a></span>
+<span><a class="iconfont adddig" data-digobj="comments_3635_2" href="javascript:;">(<i class="dignum">0</i>)</a></span>
+<span class="reply"><a href="javascript:;">回应(<i class="reply_num">0</i>)</a></span>
+</div>
+</div>
+</div>
+<div class="replay_list" style="display: none;">
+</div>
+</div>
+<div class="comment_item" data-comment-id="34">
+<div class="comment_item_body">
+<div class="commen_hd" data-uid="">
+<a href="/u/"><img alt="" onerror="this.src='https://pic.imdb.cn/static/images/nophoto.png'" src="https://pic.imdb.cn/static/images/nophoto.png"/></a>
+<a href="/u/"></a>
+<span>2020-07-06</span>
+</div>
+<div class="commen_bd">
+<div class="commen_des">可谓震撼人心！</div>
+<div class="commen_action">
+<span><a class="iconfont adddig" data-digobj="comments_34_1" href="javascript:;">(<i class="dignum">19</i>)</a></span>
+<span><a class="iconfont adddig" data-digobj="comments_34_2" href="javascript:;">(<i class="dignum">1</i>)</a></span>
+<span class="reply"><a href="javascript:;">回应(<i class="reply_num">0</i>)</a></span>
+</div>
+</div>
+</div>
+<div class="replay_list" style="display: none;">
+</div>
+</div>
+<a class="more" href="/title/tt0111161/comments">更多 &gt;</a>
+</div>
+</div> <div id="leng_comment_list">
+<link href="https://pic.imdb.cn/static/assets/css/addCollect.css?v=1.02.069" rel="stylesheet"/>
+<div class="m_short_box" id="zz_leng_comment">
+<div class="m_short_title clear" style="margin-top: 30px;">
+<p class="short_title1 fl"><b>影评</b><span>(1)</span></p>
+<p class="fr" style=" background:#eee;padding:4px 10px;border-radius: 3px "><a href="/title/tt0111161/newreview">
+<span class="iconfont"></span><span>写影评</span></a></p>
+</div>
+<ul>
+<li>
+<p class="m_short1"><i><img alt="" onerror="this.src='https://pic.imdb.cn/static/images/nophoto.png'" src="" style="width:100%; height:100%; background:#fff;"/></i>
+<a href="javascript:;"></a><span>2021-06-16</span>
+</p>
+<p class="m_short2"><a href="/title/tt0111161/review_89">希望是最好的东西</a></p>
+<p class="m_short2">
+                #肖申克的救赎#  瑞德对安迪说过 希望是危险的 所以安迪在逃出生天后 留信告诉瑞德 希望是最好的东西 它让人自由 让人获得力量  Freeman借Red之口说出了一个freeman对freedom的种种向往和憧憬 影片彰善瘅恶  烘托主旨 升华主题 结局的蓝天白云大海和开篇阴郁压抑的氛围格调形成对比 哪怕再过百年依旧经典 一如随风逝去的                <a class="more" href="/title/tt0111161/review_89">更多</a>
+</p>
+<div class="short_huiying">
+<a class="iconfont comment_like adddig" data-digobj="reviews_89_1" data-id="89" href="javascript:;"><i>(<span class="dignum">0</span>)</i></a>
+<a class="iconfont comment_trample adddig" data-digobj="reviews_89_2" data-id="89" href="javascript:;"><i>(<span class="dignum">0</span>)</i></a>
+<a href="/title/tt0111161/review_89">回应<i></i></a>
+<div class="short_shoucang fl">
+<a class="rl_ribbon addCollect addCollectText" data-f_id="89" data-f_type="reviews" href="javascript:;">收藏</a>
+</div>
+</div>
+</li>
+</ul>
+<a class="more" href="/title/tt0111161/reviews">更多 &gt;</a>
+</div>
+<script src="https://pic.imdb.cn/static/assets/js/frontend/addCollect.js?v=1.02.069"></script>
+</div>
+</div>
+</div>
+<!-- 用户评论 end -->
+<!-- 讨论区 start -->
+<div class="occupation">
+<div class="title_line clear">
+<h3>讨论区</h3>
+<div class="line_title1"></div>
+</div>
+<div class="">
+<table class="fc_table" width="880px">
+<tbody>
+<tr>
+<td><a href="/title/tt0111161/talk_31">肖申克救赎一直是top1合适吗</a></td>
+<td>来自<a href="/u/46">康建</a></td>
+<td>回应<span>(2)</span></td>
+<td>2020-09-07</td>
+</tr>
+<tr>
+<td><a href="/title/tt0111161/talk_29">123</a></td>
+<td>来自<a href="/u/46">康建</a></td>
+<td>回应<span>(2)</span></td>
+<td>2020-09-07</td>
+</tr>
+<tr>
+<td><a href="/title/tt0111161/talk_30">肖申克比教父好看吗</a></td>
+<td>来自<a href="/u/46">康建</a></td>
+<td>回应<span>(0)</span></td>
+<td>2020-09-07</td>
+</tr>
+</tbody>
+</table>
+</div>
+<a class="more" href="/title/tt0111161/talks">更多 &gt; </a>
+</div>
+<!-- 讨论区 end -->
+<!-- 电影热度 start -->
+<!-- 电影热度 end -->
+</div>
+<div class="content_r fr">
+<div class="right-source">
+<span>管理者：</span><a href="/u/654" title=""><img alt="" src="https://pic.imdb.cn/static/images/nophoto.png"/><span></span></a>
+</div>
+<div class="right-source">
+<span>认领时间：2020-09-21</span>
+</div>
+<script>
+    document.write('<div class="guide">\n' +
+        '<a href="/index/guide" title="用户引导"><img src="/images/guide.png" alt="用户引导"><span>成为签约会员，轻松领收益</span></a>\n' +
+        '</div>');
+</script>
+<div class="movie_popularity">
+<div class="movie_grade">
+<ul>
+<li>IMDB评分：<i class="iconfont"></i>
+<span><em class="Z_grade_rate">9.3</em><b>/10</b></span>
+<a href="/title/tt0111161/ratings" style="margin-left:10px;" title="2180388人参与评分">(<em class="Z_grade_rate_num">2,180,388</em>)</a></li>
+<div class="rl_grade_YOUR">
+                                你的评分 :
+                                <a class="rl_second" href="javascript:;">
+<i class="iconfont" href="#"></i>
+<span></span>
+</a>
+<div class="pingfen" data-id="37164">
+<ul class="clear">
+<li class="tvgradeclose"></li>
+<li>|</li>
+<div class="selectgrade">
+<a href="javascript:;">★</a>
+<a href="javascript:;">★</a>
+<a href="javascript:;">★</a>
+<a href="javascript:;">★</a>
+<a href="javascript:;">★</a>
+<a href="javascript:;">★</a>
+<a href="javascript:;">★</a>
+<a href="javascript:;">★</a>
+<a href="javascript:;">★</a>
+<a href="javascript:;">★</a>
+</div>
+</ul>
+</div>
+</div>
+<li><span>影评 : </span><a href="#"></a><a href="/title/tt0111161/newreview">(去写影评)</a></li>
+<li><span>热度 : </span><a href="javascript:;"><img alt="" src="https://pic.imdb.cn/static/images/hot.jpg"/>1009</a></li>
+</ul>
+</div>
+</div>
+<!-- 明星人气榜end -->
+<!-- 快速链接start -->
+<div class="content_r_bg">
+<h1>导航</h1>
+<div>
+<div class="item_r">
+<ul>
+<h4>故事情节</h4>
+<li><a href="/title/tt0111161/plotsummary">简介</a></li>
+<li><a href="/title/tt0111161/plot">剧情介绍</a></li>
+<li><a href="/title/tt0111161/slogans">经典台词</a></li>
+<li><a href="/title/tt0111161/keywords">关键词</a></li>
+</ul>
+</div>
+<div class="shouhui_cont">
+<div class="item_r">
+<h4>细节</h4>
+<ul>
+<li><a href="/title/tt0111161/cast">演职员表</a></li>
+<li><a href="/title/tt0111161/companys">主创公司</a></li>
+<li><a href="/title/tt0111161/technical">技术参数</a></li>
+<li><a href="/title/tt0111161/issued">上映日期</a></li>
+<li><a href="/title/tt0111161/film">取景地址</a></li>
+</ul>
+</div>
+<div class="item_r">
+<h4>图片</h4>
+<ul>
+<li><a href="/title/tt0111161/photos">图片</a></li>
+</ul>
+</div>
+<div class="item_r">
+<h4>你知道吗？</h4>
+<ul>
+<li><a href="/title/tt0111161/goofs">穿帮镜头</a> </li>
+<li> <a href="/title/tt0111161/otherversions">其他版本</a></li>
+</ul>
+</div>
+<div class="item_r">
+<h4>用户评论</h4>
+<ul>
+<li><a href="/title/tt0111161/comments">短评</a></li>
+<li><a href="/title/tt0111161/reviews">影评</a></li>
+<!--<li><a href="#">评分</a></li>-->
+<!--<li><a href="#">讨论区</a></li>-->
+</ul>
+</div>
+<div class="item_r">
+<h4>其它</h4>
+<ul class="qita_link">
+<li><a href="/title/tt0111161/awards">奖项</a></li>
+<li><a href="/title/tt0111161/boxoffice">票房</a></li>
+</ul>
+</div>
+</div>
+</div>
+<hr/>
+<div class="shouhui">
+<a class="iconfont" href="javascript:;">收回</a>
+</div>
+</div>
+<script>
+    var strUrl= "";
+</script>
+<script src="https://pic.imdb.cn/static/assets/js/frontend/isShowR.js?v=1.02.069" type="text/javascript"></script>
+<script>
+	var incomec={id:'0111161',srid:'0',cid:'',rid:1,tm:5000};
+</script>
+<script src="https://pic.imdb.cn/static/assets/js/incomes.js?v=1.02.069"></script>
+<!-- 快速链接end -->
+<!-- 分享到start -->
+<div class="userShare">
+<div class="userShareTit">
+<p></p>
+<span>分享到</span>
+</div>
+<ul>
+<a href="javascript:;" onclick="shareTo('wechat')" title="分享到微信"><img alt="" src="https://pic.imdb.cn/static/images/shareWechat.png"/></a>
+<a href="javascript:;" onclick="shareTo('qq')" title="分享到QQ"><img alt="" src="https://pic.imdb.cn/static/images/shareQQ.png"/></a>
+<a href="javascript:;" onclick="shareTo('qzone')" title="分享到QQ空间"><img alt="" src="https://pic.imdb.cn/static/images/shareSpace.png"/></a>
+<a href="javascript:;" onclick="shareTo('sina')" title="分享到微博"><img alt="" src="https://pic.imdb.cn/static/images/shareWeibo.png"/></a>
+</ul>
+</div>
+<!-- 分享到end -->
+</div>
+</div>
+<div class="browsing_history">
+<div class="userSpoor">
+<div class="userSpoorTit">浏览记录<a class="iconfont clear_browsing" href="javascript:;" title="清除浏览记录"> 清除浏览记录</a>
+</div>
+<ul id="browsing" location="other" style="padding:2px">
+</ul>
+</div>
+<script>
+    window.onload = function() {
+      //方法内容
+      $(".clear_browsing").click(function() {
+          $.get('/index/index/clert_browsing')
+            $(".userSpoor ul").empty();
+      });
+    };
+  </script>
+</div>
+<div class="footer">
+<div class="foot">
+<div class="foot_item">
+<div class="foot_item_tit fl">免责声明</div>
+<div class="foot_item_con fl">IMDB数据资料库内容大部分为用户上传，少部分收集自互联网，如果发布的内容侵犯了你的版权，请及时联系我们，我们会第一时间删除内容。</div>
+</div>
+<div class="foot_item">
+<div class="foot_item_tit fl">联系我们</div>
+<div class="foot_item_con fl"><img alt="IMDb中文网" src="https://pic.imdb.cn/static/img/contact.gif"/></div>
+</div>
+<div class="foot_item">
+<div class="foot_item_tit fl"><a href="/map" target="_blank" title="网站地图">网站地图</a></div>
+</div>
+<div class="foot_item">
+<div class="foot_item_con fl"><a href="http://beian.miit.gov.cn/" target="_blank">冀ICP备19038371号-1</a><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=13019902000295" style="display:inline-block;" target="_blank"><img src="https://pic.imdb.cn/static/img/gongan.png" style="float:left;">冀公网安备 13019902000295号</img></a>
+<span>Copyright@2006-2020</span><a href="/" target="_blank" title="IMDB中文网">IMDB.CN</a><a href="/" target="_blank" title="IMDB中文网">IMDB中文网</a> </div>
+</div>
+</div>
+</div>
+<span style="display:none">
+<!-- -->
+<!--<script type="text/javascript" id="refer" src="/index/tally/index?type=movie&refer=/title/tt0111161/&v=1.02.069&origin" >-->
+<!--    </script>-->
+<!-- -->
+<script>
+         var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?2a8046396b4db0b18f03b56965638e97";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+
+    })();
+
+</script>
+</span>
+</div>
+</body>
+<script src="https://pic.imdb.cn/static/assets/js/frontend/video/common.js?v=1.02.069"></script>
+<script>
+    $.get("https://www.iyingku.cn/api/index/viewnum.html?title=0111161&key=imdb_id&field=viewnum&model=movie");
+    $(function(){
+        $(".listcon_tab").on("click","span",function(){
+            $(this).addClass("listcon_tab_active").siblings().removeClass("listcon_tab_active");
+            $(".listcon_list ul").eq($(this).index()).removeClass("hide").siblings().addClass("hide");
+        })
+
+        contents($('#movie_content'));
+        function contents(obj){
+            var text = obj.text();
+            var last_child = obj.children("p:last-child");
+            var movie_content_a = `<a class="" href='/title/tt0111161/plot'>更多&gt;</a>`;
+            if(text.indexOf('…') == -1){
+                movie_content_a = '...'+movie_content_a;
+            }
+            if(last_child.length){
+                last_child.append(movie_content_a);
+            } else {
+                obj.append(movie_content_a)
+            }
+        }
+
+        $('#ep_season').on('change', function(){
+            var  val = ($(this).val());
+            window.location.href='/title/tt'+val+'/';
+        })
+    });
+</script>
+</html>
+        '''
