@@ -549,8 +549,6 @@ def get_similarUsers():
             return y[2] - x[2]
         else:
             return x[3] - y[3]
-
-
     #相似的用户
     similarUsers = []
     #参观者打过分的电影
