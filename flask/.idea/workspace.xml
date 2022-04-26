@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c18ffb8f-01c4-4006-9d10-1289170605e2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/view.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Douban/.idea/Douban.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Douban/.idea/spider.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Douban/movie.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../douban_flask/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../douban_flask/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../douban_flask/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../douban_flask/.idea/douban_flask.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/flask.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../douban_flask/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../douban_flask/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../douban_flask/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../douban_flask/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../douban_flask/countryName.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../douban_flask/createM.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../douban_flask/doubanmovie.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../douban_flask/message.db" beforeDir="false" afterPath="$PROJECT_DIR$/message.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../douban_flask/movie.db" beforeDir="false" afterPath="$PROJECT_DIR$/movie.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../douban_flask/movie2.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../douban_flask/static/assets/countryName.txt" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/countryName.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../douban_flask/static/assets/css/baguetteBox.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/css/baguetteBox.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../douban_flask/static/assets/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/css/bootstrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../douban_flask/static/assets/css/owl.carousel.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/css/owl.carousel.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../douban_flask/static/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../douban_flask/static/assets/images/brain.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/brain.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../douban_flask/static/assets/images/index_backgroud.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/index_backgroud.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../douban_flask/static/assets/images/map.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/map.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../douban_flask/static/assets/images/pro1.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/pro1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../douban_flask/static/assets/images/pro2.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/pro2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../douban_flask/static/assets/images/pro3.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/pro3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../douban_flask/static/assets/images/pro4.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/pro4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../douban_flask/static/assets/images/pro5.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/pro5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../douban_flask/static/assets/images/pro6.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/pro6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../douban_flask/static/assets/images/word.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/word.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../douban_flask/static/assets/js/bootstrap.bundle.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../douban_flask/static/assets/js/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/js/bootstrap.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../douban_flask/static/assets/js/custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/js/custom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../douban_flask/static/assets/js/ecStat.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/js/ecStat.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../douban_flask/static/assets/js/echarts.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/js/echarts.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../douban_flask/static/assets/js/jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/js/jquery.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../douban_flask/static/assets/js/owl.carousel.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/js/owl.carousel.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../douban_flask/static/assets/json/china.json" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/json/china.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../douban_flask/static/assets/json/countries.geo.json" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/json/countries.geo.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../douban_flask/templates/doubanmovie.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/doubanmovie.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../douban_flask/templates/doubanscore.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/doubanscore.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../douban_flask/templates/imdbmovie.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/imdbmovie.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../douban_flask/templates/imdbscore.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/imdbscore.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../douban_flask/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../douban_flask/templates/messageCenter.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/messageCenter.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../douban_flask/templates/recommov.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/recommov.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../douban_flask/templates/recommovR.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/recommovR.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../douban_flask/templates/scorecompare.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/scorecompare.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../douban_flask/templates/word.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/word.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../douban_flask/testCloud.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../douban_flask/testflask.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../douban_flask/testsqlite.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../douban_flask/view.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/a.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/baidu.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/student.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/test.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/testBs4.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/testSqlite.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/testUrllib.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/testXwlt.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/testre.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/正则表达式.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../爬虫.xmind" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Flask Main" />
+        <option value="Python Script" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
+    <envs>
+      <env key="FLASK_APP" value="app" />
+    </envs>
+    <option name="myCustomStartScript" value="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))" />
+    <option name="myEnvs">
+      <map>
+        <entry key="FLASK_APP" value="app" />
+      </map>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectId" id="26JxVA4ApFB1n11QAqXKzytOkCG" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="sqlite" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="database.data.extractors.current.export.id" value="Comma-separated (CSV)_id" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../spider" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="database.main" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\desktop\work\3.20\douban_flask" />
+      <recent name="E:\desktop\work\3.20\douban_flask\static\assets\js" />
+      <recent name="E:\desktop\work\3.20\douban_flask\templates" />
+      <recent name="E:\desktop\work\3.20\douban_flask\static\assets\njs" />
+      <recent name="E:\desktop\work\3.20\douban_flask\static\assets\json" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\desktop\work\3.20\flask\save" />
+      <recent name="E:\desktop\work\3.20\douban_flask" />
+      <recent name="E:\desktop\work\3.20\douban_flask\templates" />
+      <recent name="E:\desktop\work\3.20\douban_flask\static\assets\json" />
+      <recent name="E:\document\pythonWork\work\douban_flask\templates\tttt" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Flask server.Flask (app.py)">
+    <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="flask" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="testflask" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="flask" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="E:\desktop\work\3.20\flask\save\testflask.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="testsqlite" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="flask" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="E:\desktop\work\3.20\flask\save\testsqlite.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Flask (app.py) (1)" type="Python.FlaskServer" temporary="true" nameIsGenerated="true">
+      <module name="douban_flask" />
+      <option name="target" value="$PROJECT_DIR$/app.py" />
+      <option name="targetType" value="PATH" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Flask (app.py)" type="Python.FlaskServer" temporary="true" nameIsGenerated="true">
+      <module name="flask" />
+      <option name="target" value="$PROJECT_DIR$/app.py" />
+      <option name="targetType" value="PATH" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Flask (app.py)" type="Python.FlaskServer" temporary="true" nameIsGenerated="true">
+      <option name="flaskDebug" value="true" />
+      <module name="flask" />
+      <option name="target" value="$PROJECT_DIR$/app.py" />
+      <option name="targetType" value="PATH" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="douban_flask" type="Python.FlaskServer">
+      <option name="flaskDebug" value="true" />
+      <module name="flask" />
+      <option name="target" value="$PROJECT_DIR$/app.py" />
+      <option name="targetType" value="PATH" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="E:\desktop\work\douban_flask\venv\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Flask server.douban_flask" />
+      <item itemvalue="Flask server.Flask (app.py)" />
+      <item itemvalue="Flask server.Flask (app.py) (1)" />
+      <item itemvalue="Python.app" />
+      <item itemvalue="Python.testsqlite" />
+      <item itemvalue="Python.testflask" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Flask server.Flask (app.py)" />
+        <item itemvalue="Flask server.Flask (app.py) (1)" />
+        <item itemvalue="Python.testflask" />
+        <item itemvalue="Python.testsqlite" />
+        <item itemvalue="Python.app" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c18ffb8f-01c4-4006-9d10-1289170605e2" name="Changes" comment="" />
+      <created>1647155512851</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1647155512851</updated>
+      <workItem from="1647155520464" duration="3713000" />
+      <workItem from="1647173838301" duration="7196000" />
+      <workItem from="1647237423971" duration="8779000" />
+      <workItem from="1647262096222" duration="4774000" />
+      <workItem from="1647266926181" duration="2127000" />
+      <workItem from="1647325719214" duration="374000" />
+      <workItem from="1647326230002" duration="531000" />
+      <workItem from="1647327803398" duration="934000" />
+      <workItem from="1647342662627" duration="3395000" />
+      <workItem from="1647349830465" duration="5473000" />
+      <workItem from="1647421437559" duration="3296000" />
+      <workItem from="1647437082081" duration="4005000" />
+      <workItem from="1647478485018" duration="481000" />
+      <workItem from="1647481215616" duration="4022000" />
+      <workItem from="1647522237779" duration="192000" />
+      <workItem from="1647611907498" duration="64000" />
+      <workItem from="1647612118990" duration="191000" />
+      <workItem from="1647615706088" duration="494000" />
+      <workItem from="1647670119637" duration="2182000" />
+      <workItem from="1647673146315" duration="16066000" />
+      <workItem from="1647763441096" duration="2789000" />
+      <workItem from="1647928582701" duration="4141000" />
+      <workItem from="1648009505892" duration="2557000" />
+      <workItem from="1648045803658" duration="94000" />
+      <workItem from="1648109026111" duration="11322000" />
+      <workItem from="1648456535410" duration="3789000" />
+      <workItem from="1648473524243" duration="1517000" />
+      <workItem from="1648475682302" duration="1087000" />
+      <workItem from="1648533331193" duration="7595000" />
+      <workItem from="1648559265707" duration="241000" />
+      <workItem from="1648559622210" duration="5128000" />
+      <workItem from="1648644807853" duration="4987000" />
+      <workItem from="1648704342990" duration="6864000" />
+      <workItem from="1648720828713" duration="760000" />
+      <workItem from="1648722905701" duration="12953000" />
+      <workItem from="1648972857844" duration="77000" />
+      <workItem from="1648994138849" duration="1998000" />
+      <workItem from="1649051675627" duration="3743000" />
+      <workItem from="1649077754196" duration="5418000" />
+      <workItem from="1649209103635" duration="21622000" />
+      <workItem from="1649250818607" duration="2111000" />
+      <workItem from="1649315811345" duration="16638000" />
+      <workItem from="1649382824872" duration="21789000" />
+      <workItem from="1649469097336" duration="28299000" />
+      <workItem from="1650022949044" duration="4629000" />
+      <workItem from="1650028159456" duration="480000" />
+      <workItem from="1650114805295" duration="669000" />
+      <workItem from="1650116767081" duration="1885000" />
+      <workItem from="1650119443294" duration="597000" />
+      <workItem from="1650173575061" duration="28000" />
+      <workItem from="1650173615215" duration="2000" />
+      <workItem from="1650188196197" duration="34000" />
+      <workItem from="1650188320332" duration="186000" />
+      <workItem from="1650702277089" duration="12886000" />
+      <workItem from="1650723329609" duration="2694000" />
+      <workItem from="1650769995997" duration="151000" />
+      <workItem from="1650770553803" duration="23065000" />
+      <workItem from="1650801931319" duration="2140000" />
+      <workItem from="1650807738885" duration="1287000" />
+      <workItem from="1650852925903" duration="236000" />
+      <workItem from="1650860265207" duration="2697000" />
+      <workItem from="1650873040724" duration="1651000" />
+      <workItem from="1650889325508" duration="767000" />
+      <workItem from="1650964232016" duration="202000" />
+      <workItem from="1650965005073" duration="60000" />
+    </task>
+    <task id="LOCAL-00001" summary="优化了一下格式">
+      <created>1650873184075</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1650873184075</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="优化了一下格式" />
+    <option name="LAST_COMMIT_MESSAGE" value="优化了一下格式" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/flask$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1650965014288" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/douban_flask$testflask.coverage" NAME="testflask Coverage Results" MODIFIED="1650785638535" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/douban_flask$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1650873042259" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/douban_flask$testsqlite.coverage" NAME="testsqlite Coverage Results" MODIFIED="1650772548538" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/douban_flask$Flask__app_py___1_.coverage" NAME="Flask (app.py) (1) Coverage Results" MODIFIED="1650805060580" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+  </component>
+</project>
