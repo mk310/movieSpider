@@ -143,7 +143,7 @@ def askUrl(url):
     html = ""
     try:
         reponse = urllib.request.urlopen(request)                   #发出请求收到回应
-        html = reponse.read().decode("utf-8")
+        html = reponse.read().decode("utf-8") #读取获取的信息，格式为utf-8
         print(html)
     except urllib.error.URLError as e:
         if hasattr(e,"code"):

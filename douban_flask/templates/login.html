@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <!-- site metas -->
+      <title>登录</title>
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="static/assets/css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" href="static/assets/css/style.css">
+   </head>
+   <!-- body -->
+   <body class="main-layout">
+      <!-- top -->
+      <!-- header -->
+      <header>
+         <ul>
+        <h2>登录界面</h2>
+         </ul>
+     </header>
+      <!-- end header -->
+
+      <div class="workArea" >
+
+          <form action="/login" method="POST">
+       <b style="margin-left: 20px">账号：</b>   <input type="text" name="username" style="border-radius: 17px;background-color: rgb(167, 178, 178);margin: 0 20px;">
+        <b>密码:</b><input type="text" name="pwd" style="border-radius: 17px;background-color: rgb(167, 178, 178);margin: 0 20px;">
+        <input type="submit" value="登录" style="border-radius: 17px;background-color: rgb(167, 178, 178);margin: 0 20px;">
+              <button style="border-radius: 17px;background-color: rgb(167, 178, 178);margin-top: 20px;"><a href="messageCenter"> {{ msg }} </a></button>
+
+    </form>
+
+                    <center>
+                     <table class="table table-hover" style="margin-top: 20px;background-color: rgb(250, 251, 251); border-radius: 17px;">
+                    <thead>
+                    <tr>
+                        <th>登录用户</th>
+                        <th>注册时间</th>
+
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for user in logusers %}
+                        <tr>
+                            <td>{{ user[0]}}</td>
+                            <td>{{ user[1] }}</td>
+
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+
+                </table>
+                </center>
+    </div>
+
+
+
+      <!--  footer -->
+      <footer>
+         <div class="footer">
+            <div class="container">
+
+            </div>
+            <div class="copyright">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-md-8 offset-md-2">
+                        <p>Copyright &copy; mk310 name All rights reserved.<a target="_blank" >luoguo</a></p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <!-- end footer -->
+   </body>
+</html>

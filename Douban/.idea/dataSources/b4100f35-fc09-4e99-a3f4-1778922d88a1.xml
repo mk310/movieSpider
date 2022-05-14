@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="movie.db">
   <database-model serializer="dbm" dbms="SQLITE" family-id="SQLITE" format-version="4.32">
-    <root id="1"/>
+    <root id="1">
+      <ServerVersion>3.34.0</ServerVersion>
+    </root>
     <collation id="2" parent="1" name="BINARY"/>
     <collation id="3" parent="1" name="NOCASE"/>
     <collation id="4" parent="1" name="RTRIM"/>
@@ -1330,7 +1332,7 @@
     <argument id="490" parent="169">
       <Position>1</Position>
     </argument>
-    <table id="491" parent="170" name="movie250"/>
+    <table id="491" parent="170" name="doubanmovie250"/>
     <table id="492" parent="170" name="sqlite_master">
       <System>1</System>
     </table>

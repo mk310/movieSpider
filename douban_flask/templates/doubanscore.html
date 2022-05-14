@@ -305,6 +305,10 @@
 
       series: [
         {data:[
+            {% for i in range(0,length) %}
+                {name:'{{mvtype[i]}}',value:{{mvtypenum[i]}}},
+                {% endfor %}
+            ],
 
         type: 'pie',
         showBackground: true,

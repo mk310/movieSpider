@@ -10,9 +10,209 @@ app = Flask(__name__)
 
 
 
+
 @app.route('/')
 def index():  # put application's code here
-    return render_template("index.html")  #默认指向templates
+    msg = '待操作'
+    logusers = []
+    conn = sqlite3.connect("movie.db")
+    cur = conn.cursor()
+    sqlall = "select * from userlog "
+    allusers = cur.execute(sqlall)
+    for uer in allusers:
+        user = []
+        user.append(uer[0])
+        user.append(uer[2])
+        logusers.append(user)
+    cur.close()
+    conn.close()
+
+    return render_template("login.html",msg = msg,logusers = logusers)  #默认指向templates
+
+
+@app.route('/login', methods=['POST'])
+def login():
+    passwordu = 0
+    length = 0
+    logusers = []
+    conn = sqlite3.connect("movie.db")
+    cur = conn.cursor()
+    sqlall = "select * from userlog "
+    allusers = cur.execute(sqlall)
+    for uer in allusers:
+        user = []
+        user.append(uer[0])
+        user.append(uer[2])
+        logusers.append(user)
+
+    username = request.form.get('username')
+    password = request.form.get('pwd')
+
+
+    #后台登录
+    if username == 'sudo' and password == '123':
+        return render_template("backin.html",logusers = logusers)
+    #不能为空
+    if username == ''or password == '':
+        return render_template("login.html", msg="密码或者用户名不能为空",logusers =logusers)
+    conn = sqlite3.connect("movie.db")
+    cur = conn.cursor()
+    sqluser = "select password,date from userlog where user = '%s'" % (username)
+    userpasses = cur.execute(sqluser)
+    for userpass in userpasses:
+        length = len(userpass)
+        passwordu = userpass[0]
+
+
+
+
+   #输入的用户不存在，直接注册
+    if length == 0:
+
+        date= time.strftime('%Y-%m-%d %H:%M:%S',time.localtime())
+        date = "'" + date + "'"
+        sqlinsert = '''
+                       insert into userlog (user,password,date)
+                       values('%s','%s',%s)'''%(username,password,date)
+        cur.execute(sqlinsert)
+        conn.commit()
+        logusers = []
+        sqlall = "select * from userlog "
+        allusers = cur.execute(sqlall)
+        for uer in allusers:
+            user = []
+            user.append(uer[0])
+            user.append(uer[2])
+            logusers.append(user)
+
+        return render_template("login.html", msg="用户不存在,现已注册,请登录",logusers = logusers)
+
+    if password == passwordu:
+        return render_template("index.html", msg="登录成功")
+    else:
+        return render_template("login.html", msg="密码错误",logusers = logusers)
+
+    cur.close()
+    conn.close()
+
+#后台
+@app.route('/backin')
+def backin():
+    passwordu = 0
+    length = 0
+    logusers = []
+    conn = sqlite3.connect("movie.db")
+    cur = conn.cursor()
+    sqlall = "select * from userlog "
+    allusers = cur.execute(sqlall)
+    for uer in allusers:
+        user = []
+        user.append(uer[0])
+        user.append(uer[1])
+        user.append(uer[2])
+        logusers.append(user)
+
+    return render_template("back.html",logusers =logusers)
+
+
+
+
+
+#后台
+@app.route('/back',methods=['GET','POST'])
+def back():
+    passwordu = 0
+    length = 0
+    logusers = []
+    conn = sqlite3.connect("movie.db")
+    cur = conn.cursor()
+    sqlall = "select * from userlog "
+    allusers = cur.execute(sqlall)
+    for uer in allusers:
+        user = []
+        user.append(uer[0])
+        user.append(uer[1])
+        user.append(uer[2])
+        logusers.append(user)
+
+    username = request.form.get('username')
+    password = request.form.get('pwd')
+    # 用户不存在
+    conn = sqlite3.connect("movie.db")
+    cur = conn.cursor()
+    sqluser = "select password,date from userlog where user = '%s'" % (username)
+    userpasses = cur.execute(sqluser)
+    for userpass in userpasses:
+        length = len(userpass)
+    if length == 0:
+        return render_template("back.html", msg="用户不存在", logusers =logusers)
+    # 用户存在
+    else:
+        # 删除
+        if password== 'del':
+            sqlde = "DELETE FROM userlog WHERE user = '%s'" % (username)
+            cur.execute(sqlde)
+            conn.commit()
+            logusers = []
+            sqlall = "select * from userlog "
+            allusers = cur.execute(sqlall)
+            for uer in allusers:
+                user = []
+                user.append(uer[0])
+                user.append(uer[1])
+                user.append(uer[2])
+                logusers.append(user)
+
+            return render_template("back.html", msg="删除",logusers =logusers)
+        else:
+            sqlup = "UPDATE userlog SET password = '%s' WHERE user = '%s'" % (password, username)
+            cur.execute(sqlup)
+            conn.commit()
+            logusers = []
+            sqlall = "select * from userlog "
+            allusers = cur.execute(sqlall)
+            for uer in allusers:
+                user = []
+                user.append(uer[0])
+                user.append(uer[1])
+                user.append(uer[2])
+                logusers.append(user)
+            return render_template("back.html", msg="修改密码", logusers =logusers)
+    return render_template("back.html", msg="待操作", logusers =logusers)
+
+    # else:
+    #     if password == '':
+
+    #     else:
+
+    #
+    #     conn = sqlite3.connect("movie.db")
+    #     cur = conn.cursor()
+    #     sqlall = "select * from userlog "
+    #     allusers = cur.execute(sqlall)
+    #     for uer in allusers:
+    #         user = []
+    #         user.append(uer[0])
+    #         user.append(uer[1])
+    #         user.append(uer[2])
+    #         logusers.append(user)
+    #     return render_template("back.html", msg="修改后", logusers=logusers)
+
+
+
+
+
+
+
+
+   #
+   #  if password == passwordu:
+   #      return render_template("index.html", msg="登录成功")
+   #  else:
+   #      return render_template("login.html", msg="密码错误",logusers = logusers)
+
+    cur.close()
+    conn.close()
 
 #主页
 @app.route('/index')

@@ -27,14 +27,13 @@ conn.close()            #获取一个超长的文本
 cut = jieba.cut(text)   #剪切
 string = ' '.join(cut)
 print(string)
-
 stopwords = set('')
 stopwords.update(['的','来','脸','之'])
 img = Image.open(r'.\static\assets\images\brain.png')          #打开图片
 img_array = np.array(img)                                   #图片数组化
 wc = WordCloud(
-    background_color = 'white',
-    mask =None,
+    background_color = 'yellow',
+    mask =img_array,
     font_path="simkai.ttf",                                  #本机电脑字体位置C:\Windows\Fonts
     max_words=150,
     scale=1.5,
